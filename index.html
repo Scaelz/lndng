@@ -3,44 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой Лендинг</title>
+    <title>Фестиваль искусств | ArtFest 2023</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo">Лого</a>
-            <div class="menu">
-                <a href="#about">О нас</a>
-                <a href="#features">Преимущества</a>
-                <a href="#contacts">Контакты</a>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <img src="images/logoipsum-378.png" alt="Логотип фестиваля">
+                </div>
+                <nav class="header__nav">
+                    <a href="#about" class="header__link">О фестивале</a>
+                    <a href="#program" class="header__link">Программа</a>
+                    <a href="#tickets" class="header__link">Оплата</a>
+                    <a href="#contacts" class="header__link">Контакты</a>
+                </nav>
             </div>
-        </nav>
+        </div>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Заголовок проекта</h1>
-            <p>Краткое описание</p>
-            <button>Купить/Заказать</button>
+            <div class="hero__bg" id="parallax-bg"></div>
+            <div class="hero__logo">
+                <img src="images/logoipsum-378 (1).png" alt="Главный логотип">
+            </div>
+            <div class="hero__scroll">
+                <span>Листайте вниз</span>
+            </div>
         </section>
 
-        <section id="about">
-            <h2>О нас</h2>
-            <p>Текст...</p>
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section__inner">
+                    <h2 class="section__title">О фестивале</h2>
+                    <div class="section__content">
+                        <p>ArtFest — это ежегодный фестиваль искусств, объединяющий художников, музыкантов и перформеров со всего мира. В 2023 году фестиваль пройдет с 15 по 18 сентября в историческом центре города.</p>
+                        <p>В этом году тема фестиваля — "Границы восприятия". Мы исследуем, как искусство может расширять наши горизонты и менять взгляд на привычные вещи.</p>
+                        <div class="about__stats">
+                            <div class="stat">
+                                <div class="stat__number">4</div>
+                                <div class="stat__label">дня</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat__number">120+</div>
+                                <div class="stat__label">участников</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat__number">15</div>
+                                <div class="stat__label">площадок</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="features">
-            <h2>Преимущества</h2>
-            <div class="feature-item">
-                <h3>Фича 1</h3>
-                <p>Описание</p>
+        <section class="section program" id="program">
+    <div class="container">
+        <h2 class="section__title">Программа</h2>
+        <div class="program__items">
+            <!-- Мероприятие 1 -->
+            <div class="program__item" data-color="#0080B0">
+                <div class="program__preview" style="background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="program__info">
+                    <div class="program__date">15 сентября</div>
+                    <h3 class="program__title">Открытие фестиваля</h3>
+                    <div class="program__time">18:00 - 22:00</div>
+                    <div class="program__desc">Торжественное открытие с перформансами и инсталляциями</div>
+                </div>
+            </div>
+            
+            <!-- Мероприятие 2 -->
+            <div class="program__item" data-color="#213F33">
+                <div class="program__preview" style="background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="program__info">
+                    <div class="program__date">16 сентября</div>
+                    <h3 class="program__title">Выставка "Границы"</h3>
+                    <div class="program__time">10:00 - 20:00</div>
+                    <div class="program__desc">Современные художники представляют свои работы</div>
+                </div>
+            </div>
+            
+            <!-- Мероприятие 3 -->
+            <div class="program__item" data-color="#5C504B">
+                <div class="program__preview" style="background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="program__info">
+                    <div class="program__date">17 сентября</div>
+                    <h3 class="program__title">Музыкальный вечер</h3>
+                    <div class="program__time">19:00 - 23:00</div>
+                    <div class="program__desc">Экспериментальная музыка и звуковые инсталляции</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="program__glow"></div>
+</section>
+
+        <section class="section tickets" id="tickets">
+            <div class="container">
+                <div class="section__inner">
+                    <h2 class="section__title">Билеты</h2>
+                    <div class="section__content">
+                        <div class="tickets__options">
+                            <div class="ticket">
+                                <h3 class="ticket__title">Однодневный</h3>
+                                <div class="ticket__price">1500 ₽</div>
+                                <ul class="ticket__features">
+                                    <li>Доступ на 1 день</li>
+                                    <li>Участие в мероприятиях</li>
+                                    <li>Буклет фестиваля</li>
+                                </ul>
+                                <button class="ticket__buy">Купить</button>
+                            </div>
+                            <div class="ticket ticket--featured">
+                                <div class="ticket__badge">Выгодно</div>
+                                <h3 class="ticket__title">Полный</h3>
+                                <div class="ticket__price">4500 ₽</div>
+                                <ul class="ticket__features">
+                                    <li>Доступ на все дни</li>
+                                    <li>Участие в мероприятиях</li>
+                                    <li>Буклет фестиваля</li>
+                                    <li>Эксклюзивный мерч</li>
+                                </ul>
+                                <button class="ticket__buy">Купить</button>
+                            </div>
+                            <div class="ticket">
+                                <h3 class="ticket__title">VIP</h3>
+                                <div class="ticket__price">10000 ₽</div>
+                                <ul class="ticket__features">
+                                    <li>Доступ на все дни</li>
+                                    <li>VIP-зона</li>
+                                    <li>Встреча с артистами</li>
+                                    <li>Подарочный набор</li>
+                                </ul>
+                                <button class="ticket__buy">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contacts" id="contacts">
+            <div class="container">
+                <div class="section__inner">
+                    <h2 class="section__title">Контакты</h2>
+                    <div class="section__content">
+                        <div class="contacts__info">
+                            <div class="contact">
+                                <div class="contact__icon">📍</div>
+                                <div class="contact__text">г. Москва, Парк Горького</div>
+                            </div>
+                            <div class="contact">
+                                <div class="contact__icon">📞</div>
+                                <div class="contact__text">+7 (495) 123-45-67</div>
+                            </div>
+                            <div class="contact">
+                                <div class="contact__icon">✉️</div>
+                                <div class="contact__text">info@artfest.ru</div>
+                            </div>
+                        </div>
+                        <div class="contacts__social">
+                            <a href="#" class="social__link">Instagram</a>
+                            <a href="#" class="social__link">Facebook</a>
+                            <a href="#" class="social__link">VK</a>
+                            <a href="#" class="social__link">Telegram</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer id="contacts">
-        <p>Контакты: example@mail.com</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__copy">© ArtFest 2023. Все права защищены.</div>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Политика конфиденциальности</a>
+                    <a href="#" class="footer__link">Правила посещения</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
