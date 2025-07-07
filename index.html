@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -16,6 +18,13 @@
                 <div class="header__logo">
                     <img src="images/logoipsum-378.png" alt="Логотип фестиваля">
                 </div>
+
+                <button class="header__burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
                 <nav class="header__nav">
                     <a href="#about" class="header__link">О фестивале</a>
                     <a href="#program" class="header__link">Программа</a>
@@ -42,8 +51,11 @@
                 <div class="section__inner">
                     <h2 class="section__title">О фестивале</h2>
                     <div class="section__content">
-                        <p>ArtFest — это ежегодный фестиваль искусств, объединяющий художников, музыкантов и перформеров со всего мира. В 2023 году фестиваль пройдет с 15 по 18 сентября в историческом центре города.</p>
-                        <p>В этом году тема фестиваля — "Границы восприятия". Мы исследуем, как искусство может расширять наши горизонты и менять взгляд на привычные вещи.</p>
+                        <p>ArtFest — это ежегодный фестиваль искусств, объединяющий художников, музыкантов и перформеров
+                            со всего мира. В 2023 году фестиваль пройдет с 15 по 18 сентября в историческом центре
+                            города.</p>
+                        <p>В этом году тема фестиваля — "Границы восприятия". Мы исследуем, как искусство может
+                            расширять наши горизонты и менять взгляд на привычные вещи.</p>
                         <div class="about__stats">
                             <div class="stat">
                                 <div class="stat__number">4</div>
@@ -64,45 +76,51 @@
         </section>
 
         <section class="section program" id="program">
-    <div class="container">
-        <h2 class="section__title">Программа</h2>
-        <div class="program__items">
-            <!-- Мероприятие 1 -->
-            <div class="program__item" data-color="#0080B0">
-                <div class="program__preview" style="background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
-                <div class="program__info">
-                    <div class="program__date">15 сентября</div>
-                    <h3 class="program__title">Открытие фестиваля</h3>
-                    <div class="program__time">18:00 - 22:00</div>
-                    <div class="program__desc">Торжественное открытие с перформансами и инсталляциями</div>
+            <div class="container">
+                <h2 class="section__title">Программа</h2>
+                <div class="program__items">
+                    <!-- Мероприятие 1 -->
+                    <div class="program__item" data-color="#0080B0">
+                        <div class="program__preview"
+                            style="background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="program__info">
+                            <div class="program__date">15 сентября</div>
+                            <h3 class="program__title">Открытие фестиваля</h3>
+                            <div class="program__time">18:00 - 22:00</div>
+                            <div class="program__desc">Торжественное открытие с перформансами и инсталляциями</div>
+                        </div>
+                    </div>
+
+                    <!-- Мероприятие 2 -->
+                    <div class="program__item" data-color="#213F33">
+                        <div class="program__preview"
+                            style="background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="program__info">
+                            <div class="program__date">16 сентября</div>
+                            <h3 class="program__title">Выставка "Границы"</h3>
+                            <div class="program__time">10:00 - 20:00</div>
+                            <div class="program__desc">Современные художники представляют свои работы</div>
+                        </div>
+                    </div>
+
+                    <!-- Мероприятие 3 -->
+                    <div class="program__item" data-color="#5C504B">
+                        <div class="program__preview"
+                            style="background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
+                        </div>
+                        <div class="program__info">
+                            <div class="program__date">17 сентября</div>
+                            <h3 class="program__title">Музыкальный вечер</h3>
+                            <div class="program__time">19:00 - 23:00</div>
+                            <div class="program__desc">Экспериментальная музыка и звуковые инсталляции</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Мероприятие 2 -->
-            <div class="program__item" data-color="#213F33">
-                <div class="program__preview" style="background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
-                <div class="program__info">
-                    <div class="program__date">16 сентября</div>
-                    <h3 class="program__title">Выставка "Границы"</h3>
-                    <div class="program__time">10:00 - 20:00</div>
-                    <div class="program__desc">Современные художники представляют свои работы</div>
-                </div>
-            </div>
-            
-            <!-- Мероприятие 3 -->
-            <div class="program__item" data-color="#5C504B">
-                <div class="program__preview" style="background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
-                <div class="program__info">
-                    <div class="program__date">17 сентября</div>
-                    <h3 class="program__title">Музыкальный вечер</h3>
-                    <div class="program__time">19:00 - 23:00</div>
-                    <div class="program__desc">Экспериментальная музыка и звуковые инсталляции</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="program__glow"></div>
-</section>
+            <div class="program__glow"></div>
+        </section>
 
         <section class="section tickets" id="tickets">
             <div class="container">
@@ -194,4 +212,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
