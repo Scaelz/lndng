@@ -1,264 +1,391 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Фестиваль искусств | ArtFest 2023</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <div class="header__logo">
-                    <img src="images/logoipsum-378.png" alt="Логотип фестиваля">
-                </div>
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">
+            <img src="images/logoipsum-378.png" alt="Логотип фестиваля" />
+          </div>
 
-                <button class="header__burger" aria-label="Меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+          <button class="header__burger" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-                <nav class="header__nav">
-                    <a href="#about" class="header__link">О фестивале</a>
-                    <a href="#program" class="header__link">Программа</a>
-                    <a href="#tickets" class="header__link">Оплата</a>
-                    <a href="#contacts" class="header__link">Контакты</a>
-                </nav>
-            </div>
+          <nav class="header__nav">
+            <a href="#about" class="header__link">О фестивале</a>
+            <a href="#program" class="header__link">Программа</a>
+            <a href="#tickets" class="header__link">Оплата</a>
+            <a href="#contacts" class="header__link">Контакты</a>
+          </nav>
         </div>
+      </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero__bg" id="parallax-bg"></div>
-            <div class="hero__logo">
-                <img src="images/logoipsum-378 (1).png" alt="Главный логотип">
-            </div>
-            <div class="hero__scroll">
-                <span>Листайте вниз</span>
-            </div>
-        </section>
+      <section class="hero">
+        <div class="hero__bg" id="parallax-bg"></div>
+        <div class="hero__logo">
+          <img src="images/logoipsum-378 (1).png" alt="Главный логотип" />
+        </div>
+        <div class="hero__scroll">
+          <span>Листайте вниз</span>
+        </div>
+      </section>
 
-        <section class="section about" id="about">
-            <div class="container">
-                <div class="section__inner">
-                    <h2 class="section__title">О фестивале</h2>
-                    <div class="section__content">
-                        <p>ArtFest — это ежегодный фестиваль искусств, объединяющий художников, музыкантов и перформеров
-                            со всего мира. В 2023 году фестиваль пройдет с 15 по 18 сентября в историческом центре
-                            города.</p>
-                        <p>В этом году тема фестиваля — "Границы восприятия". Мы исследуем, как искусство может
-                            расширять наши горизонты и менять взгляд на привычные вещи.</p>
-                        <div class="about__stats">
-                            <div class="stat">
-                                <div class="stat__number">4</div>
-                                <div class="stat__label">дня</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__number">120+</div>
-                                <div class="stat__label">участников</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__number">15</div>
-                                <div class="stat__label">площадок</div>
-                            </div>
-                        </div>
-                    </div>
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="section__inner">
+            <h2 class="section__title">О фестивале</h2>
+            <div class="section__content">
+              <div class="about__text">
+                <p class="about__paragraph">
+                  "Место Силы" - фестиваль психологии, культуры и саморазвития,
+                  где вы сможете отдохнуть, найти новых друзей, погрузиться в
+                  атмосферу спокойствия и наполниться ресурсом. Состоится с 1 по
+                  3 августа в уникальном месте, недалеко от Воронежа. Это
+                  событие станет поворотной точкой на вашей дороге жизни.
+                </p>
+
+                <p class="about__paragraph">
+                  У нас вы приобретёте важные навыки:
+                </p>
+
+                <ul class="about__skills-list">
+                  <li class="about__skill-item">
+                    Научитесь внутреннему спокойствию и узнаете, как даже в
+                    сложных ситуациях оставаться в позитивном мышлении
+                  </li>
+                  <li class="about__skill-item">
+                    Сможете улучшить взаимоотношения: в семье, на работе, с
+                    друзьями
+                  </li>
+                  <li class="about__skill-item">
+                    Кто в поиске своей половинки, узнает как ускорить эту
+                    встречу и создать прочный союз
+                  </li>
+                  <li class="about__skill-item">
+                    Найдёте причину почему не растёт финансовый доход и
+                    построите стратегию его увеличения
+                  </li>
+                  <li class="about__skill-item">
+                    Научитесь сосредотачиваться на главном и управлять своим
+                    временем
+                  </li>
+                </ul>
+
+                <p class="about__paragraph about__paragraph--highlight">
+                  Наш фестиваль - не только место отдыха и релакса, он
+                  качественно изменит всю вашу жизнь
+                </p>
+              </div>
+              <div class="about__stats">
+                <div class="stat">
+                  <div class="stat__number">3</div>
+                  <div class="stat__label">дня</div>
                 </div>
-            </div>
-        </section>
-
-        <section class="section program" id="program">
-            <div class="container">
-                <h2 class="section__title">Программа</h2>
-                <div class="program__items">
-                    <!-- Мероприятие 1 -->
-                    <div class="program__item" data-color="#0080B0">
-                        <div class="program__preview"
-                            style="background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
-                        </div>
-                        <div class="program__info">
-                            <div class="program__date">15 сентября</div>
-                            <h3 class="program__title">Открытие фестиваля</h3>
-                            <div class="program__time">18:00 - 22:00</div>
-                            <div class="program__desc">Торжественное открытие с перформансами и инсталляциями</div>
-                        </div>
-                    </div>
-
-                    <!-- Мероприятие 2 -->
-                    <div class="program__item" data-color="#213F33">
-                        <div class="program__preview"
-                            style="background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
-                        </div>
-                        <div class="program__info">
-                            <div class="program__date">16 сентября</div>
-                            <h3 class="program__title">Выставка "Границы"</h3>
-                            <div class="program__time">10:00 - 20:00</div>
-                            <div class="program__desc">Современные художники представляют свои работы</div>
-                        </div>
-                    </div>
-
-                    <!-- Мероприятие 3 -->
-                    <div class="program__item" data-color="#5C504B">
-                        <div class="program__preview"
-                            style="background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
-                        </div>
-                        <div class="program__info">
-                            <div class="program__date">17 сентября</div>
-                            <h3 class="program__title">Музыкальный вечер</h3>
-                            <div class="program__time">19:00 - 23:00</div>
-                            <div class="program__desc">Экспериментальная музыка и звуковые инсталляции</div>
-                        </div>
-                    </div>
+                <div class="stat">
+                  <div class="stat__number">150+</div>
+                  <div class="stat__label">участников</div>
                 </div>
-            </div>
-            <div class="program__glow"></div>
-        </section>
-
-        <section class="section partners">
-            <div class="container">
-                <h2 class="section__title">Наши партнеры</h2>
-                <div class="partners__grid">
-                    <!-- Партнер 1 -->
-                    <div class="partner__card">
-                        <img src="https://via.placeholder.com/200x100?text=Partner+1" alt="Логотип партнера 1"
-                            class="partner__logo">
-                        <div class="partner__info">
-                            <h3 class="partner__name">Эко-технологии</h3>
-                            <p class="partner__desc">Официальный экологический партнер фестиваля</p>
-                        </div>
-                    </div>
-
-                    <!-- Партнер 2 -->
-                    <div class="partner__card">
-                        <img src="https://via.placeholder.com/200x100?text=Partner+2" alt="Логотип партнера 2"
-                            class="partner__logo">
-                        <div class="partner__info">
-                            <h3 class="partner__name">Арт-фонд</h3>
-                            <p class="partner__desc">Поддержка молодых художников</p>
-                        </div>
-                    </div>
-
-                    <!-- Партнер 3 -->
-                    <div class="partner__card">
-                        <img src="https://via.placeholder.com/200x100?text=Partner+3" alt="Логотип партнера 3"
-                            class="partner__logo">
-                        <div class="partner__info">
-                            <h3 class="partner__name">Городские власти</h3>
-                            <p class="partner__desc">Организационная поддержка</p>
-                        </div>
-                    </div>
-
-                    <!-- Партнер 4 -->
-                    <div class="partner__card">
-                        <img src="https://via.placeholder.com/200x100?text=Partner+4" alt="Логотип партнера 4"
-                            class="partner__logo">
-                        <div class="partner__info">
-                            <h3 class="partner__name">Медиагруппа</h3>
-                            <p class="partner__desc">Информационный партнер</p>
-                        </div>
-                    </div>
+                <div class="stat">
+                  <div class="stat__number">25+</div>
+                  <div class="stat__label">спикеров</div>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="section tickets" id="tickets">
-            <div class="container">
-                <div class="section__inner">
-                    <h2 class="section__title">Билеты</h2>
-                    <div class="section__content">
-                        <div class="tickets__options">
-                            <div class="ticket">
-                                <h3 class="ticket__title">Однодневный</h3>
-                                <div class="ticket__price">1500 ₽</div>
-                                <ul class="ticket__features">
-                                    <li>Доступ на 1 день</li>
-                                    <li>Участие в мероприятиях</li>
-                                    <li>Буклет фестиваля</li>
-                                </ul>
-                                <button class="ticket__buy">Купить</button>
-                            </div>
-                            <div class="ticket ticket--featured">
-                                <div class="ticket__badge">Выгодно</div>
-                                <h3 class="ticket__title">Полный</h3>
-                                <div class="ticket__price">4500 ₽</div>
-                                <ul class="ticket__features">
-                                    <li>Доступ на все дни</li>
-                                    <li>Участие в мероприятиях</li>
-                                    <li>Буклет фестиваля</li>
-                                    <li>Эксклюзивный мерч</li>
-                                </ul>
-                                <button class="ticket__buy">Купить</button>
-                            </div>
-                            <div class="ticket">
-                                <h3 class="ticket__title">VIP</h3>
-                                <div class="ticket__price">10000 ₽</div>
-                                <ul class="ticket__features">
-                                    <li>Доступ на все дни</li>
-                                    <li>VIP-зона</li>
-                                    <li>Встреча с артистами</li>
-                                    <li>Подарочный набор</li>
-                                </ul>
-                                <button class="ticket__buy">Купить</button>
-                            </div>
-                        </div>
-                    </div>
+      <section class="section program" id="program">
+        <div class="container">
+          <h2 class="section__title">Программа</h2>
+          <div class="program__items">
+            <!-- Мероприятие 1 -->
+            <div class="program__item" data-color="#0080B0">
+              <div
+                class="program__preview"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="program__info">
+                <div class="program__date">15 сентября</div>
+                <h3 class="program__title">Открытие фестиваля</h3>
+                <div class="program__time">18:00 - 22:00</div>
+                <div class="program__desc">
+                  Торжественное открытие с перформансами и инсталляциями
                 </div>
+              </div>
             </div>
-        </section>
 
-        <section class="section contacts" id="contacts">
-            <div class="container">
-                <div class="section__inner">
-                    <h2 class="section__title">Контакты</h2>
-                    <div class="section__content">
-                        <div class="contacts__info">
-                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A494e9aff3ed5af6f9a7e9b40f05b58d179e4fcc24974491d0883f3378a70c9d9&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
-                            <div class="contact">
-                                <div class="contact__icon">📍</div>
-                                <div class="contact__text">г. Москва, Парк Горького</div>
-                            </div>
-                            <div class="contact">
-                                <div class="contact__icon">📞</div>
-                                <div class="contact__text">+7 (495) 123-45-67</div>
-                            </div>
-                            <div class="contact">
-                                <div class="contact__icon">✉️</div>
-                                <div class="contact__text">info@artfest.ru</div>
-                            </div>
-                        </div>
-                        <div class="contacts__social">
-                            <a href="#" class="social__link">Instagram</a>
-                            <a href="#" class="social__link">Facebook</a>
-                            <a href="#" class="social__link">VK</a>
-                            <a href="#" class="social__link">Telegram</a>
-                        </div>
-                    </div>
+            <!-- Мероприятие 2 -->
+            <div class="program__item" data-color="#213F33">
+              <div
+                class="program__preview"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="program__info">
+                <div class="program__date">16 сентября</div>
+                <h3 class="program__title">Выставка "Границы"</h3>
+                <div class="program__time">10:00 - 20:00</div>
+                <div class="program__desc">
+                  Современные художники представляют свои работы
                 </div>
+              </div>
             </div>
-        </section>
+
+            <!-- Мероприятие 3 -->
+            <div class="program__item" data-color="#5C504B">
+              <div
+                class="program__preview"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="program__info">
+                <div class="program__date">17 сентября</div>
+                <h3 class="program__title">Музыкальный вечер</h3>
+                <div class="program__time">19:00 - 23:00</div>
+                <div class="program__desc">
+                  Экспериментальная музыка и звуковые инсталляции
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="program__glow"></div>
+      </section>
+
+      <section class="section partners">
+        <div class="container">
+          <h2 class="section__title">Наши партнеры</h2>
+          <div class="partners__grid">
+            <!-- Партнер 1 -->
+            <div class="partner__card">
+              <img
+                src="https://via.placeholder.com/200x100?text=Partner+1"
+                alt="Логотип партнера 1"
+                class="partner__logo"
+              />
+              <div class="partner__info">
+                <h3 class="partner__name">Эко-технологии</h3>
+                <p class="partner__desc">
+                  Официальный экологический партнер фестиваля
+                </p>
+              </div>
+            </div>
+
+            <!-- Партнер 2 -->
+            <div class="partner__card">
+              <img
+                src="https://via.placeholder.com/200x100?text=Partner+2"
+                alt="Логотип партнера 2"
+                class="partner__logo"
+              />
+              <div class="partner__info">
+                <h3 class="partner__name">Арт-фонд</h3>
+                <p class="partner__desc">Поддержка молодых художников</p>
+              </div>
+            </div>
+
+            <!-- Партнер 3 -->
+            <div class="partner__card">
+              <img
+                src="https://via.placeholder.com/200x100?text=Partner+3"
+                alt="Логотип партнера 3"
+                class="partner__logo"
+              />
+              <div class="partner__info">
+                <h3 class="partner__name">Городские власти</h3>
+                <p class="partner__desc">Организационная поддержка</p>
+              </div>
+            </div>
+
+            <!-- Партнер 4 -->
+            <div class="partner__card">
+              <img
+                src="https://via.placeholder.com/200x100?text=Partner+4"
+                alt="Логотип партнера 4"
+                class="partner__logo"
+              />
+              <div class="partner__info">
+                <h3 class="partner__name">Медиагруппа</h3>
+                <p class="partner__desc">Информационный партнер</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pricing">
+        <div class="container">
+          <div class="section__inner">
+            <h2 class="section__title">Стоимость участия</h2>
+            <div class="pricing__content">
+              <div class="pricing__highlight">
+                <span class="pricing__main-price">❗️ 4500 руб ❗️</span>
+                <div class="pricing__discounts">
+                  <p>
+                    Дети до 7 лет <span class="pricing__free">бесплатно</span>
+                  </p>
+                  <p>
+                    Дети от 7 до 16 лет
+                    <span class="pricing__half">50% скидка</span>
+                  </p>
+                </div>
+              </div>
+
+              <ul class="pricing__includes">
+                <li>В стоимость входит вся программа и проживание</li>
+                <li>Питание оплачивается отдельно</li>
+              </ul>
+
+              <div class="pricing__notice">
+                ⚠️ Но, стоит поторопиться, эта стоимость сохраняется до 13 июля
+              </div>
+
+              <div class="pricing__timeline">
+                <div class="timeline__item">
+                  <span class="timeline__dates">С 14 июля по 20 июля</span>
+                  <span class="timeline__price">5000 рублей</span>
+                </div>
+                <div class="timeline__item">
+                  <span class="timeline__dates">С 21 июля по 27 июля</span>
+                  <span class="timeline__price">5500 рублей</span>
+                </div>
+                <div class="timeline__item">
+                  <span class="timeline__dates">С 28 по 31 июля</span>
+                  <span class="timeline__price">6000 рублей</span>
+                </div>
+                <div class="timeline__item">
+                  <span class="timeline__dates">На входе</span>
+                  <span class="timeline__price">6500 рублей</span>
+                </div>
+              </div>
+
+              <div class="pricing__contact">
+                По вопросам оплаты обращайтесь к контактному лицу по телефону:
+                <p class="contact__phone">📞 +7-951-559-21-90 Лариса</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="section tickets" id="tickets">
+        <div class="container">
+          <div class="section__inner">
+            <h2 class="section__title">Билеты</h2>
+            <div class="section__content">
+              <div class="tickets__options">
+                <div class="ticket">
+                  <h3 class="ticket__title">Однодневный</h3>
+                  <div class="ticket__price">1500 ₽</div>
+                  <ul class="ticket__features">
+                    <li>Доступ на 1 день</li>
+                    <li>Участие в мероприятиях</li>
+                    <li>Буклет фестиваля</li>
+                  </ul>
+                  <button class="ticket__buy">Купить</button>
+                </div>
+                <div class="ticket ticket--featured">
+                  <div class="ticket__badge">Выгодно</div>
+                  <h3 class="ticket__title">Полный</h3>
+                  <div class="ticket__price">4500 ₽</div>
+                  <ul class="ticket__features">
+                    <li>Доступ на все дни</li>
+                    <li>Участие в мероприятиях</li>
+                    <li>Буклет фестиваля</li>
+                    <li>Эксклюзивный мерч</li>
+                  </ul>
+                  <button class="ticket__buy">Купить</button>
+                </div>
+                <div class="ticket">
+                  <h3 class="ticket__title">VIP</h3>
+                  <div class="ticket__price">10000 ₽</div>
+                  <ul class="ticket__features">
+                    <li>Доступ на все дни</li>
+                    <li>VIP-зона</li>
+                    <li>Встреча с артистами</li>
+                    <li>Подарочный набор</li>
+                  </ul>
+                  <button class="ticket__buy">Купить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section contacts" id="contacts">
+        <div class="container">
+          <div class="section__inner">
+            <h2 class="section__title">Контакты</h2>
+            <div class="section__content">
+              <div class="contacts__info">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A494e9aff3ed5af6f9a7e9b40f05b58d179e4fcc24974491d0883f3378a70c9d9&amp;source=constructor"
+                  height="400"
+                  frameborder="0"
+                ></iframe>
+                <div class="contact">
+                  <div class="contact__icon">📍</div>
+                  <div class="contact__text">
+                    г. Воронеж, село Горожанка, ретритный центр «Новая земля».
+                  </div>
+                </div>
+                <div class="contact">
+                  <div class="contact__icon">📞</div>
+                  <div class="contact__text">+7-951-559-21-90</div>
+                </div>
+                <div class="contact">
+                  <div class="contact__icon">✉️</div>
+                  <div class="contact__text">info@artfest.ru</div>
+                </div>
+              </div>
+              <div class="contacts__social">
+                <a href="#" class="social__link">Instagram</a>
+                <a href="#" class="social__link">Facebook</a>
+                <a href="#" class="social__link">VK</a>
+                <a href="#" class="social__link">Telegram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__copy">© ArtFest 2023. Все права защищены.</div>
-                <div class="footer__links">
-                    <a href="#" class="footer__link">Политика конфиденциальности</a>
-                    <a href="#" class="footer__link">Правила посещения</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__copy">© ArtFest 2023. Все права защищены.</div>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Политика конфиденциальности</a>
+            <a href="#" class="footer__link">Правила посещения</a>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
