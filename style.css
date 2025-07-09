@@ -42,11 +42,10 @@ body {
   transition: all 0.3s ease;
 }
 
-  .header_title {
-    font-size: 22px;
-    font-weight: bolder;
-  }
-
+.header_title {
+  font-size: 22px;
+  font-weight: bolder;
+}
 
 .header__inner {
   display: flex;
