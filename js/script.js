@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Конфигурация галереи
     const galleryPhotos = [
         "https://picsum.dev//static/42/800/600",
-        "https://picsum.dev//static/1/800/600",
-        "https://picsum.dev//static/2/800/600",
-        "https://picsum.dev//static/3/800/600",
-        "https://picsum.dev//static/4/800/600",
-        "https://picsum.dev//static/5/800/600",
-        "https://picsum.dev//static/6/800/600",
+        // "https://picsum.dev//static/1/800/600",
+        // "https://picsum.dev//static/2/800/600",
+        // "https://picsum.dev//static/3/800/600",
+        // "https://picsum.dev//static/4/800/600",
+        // "https://picsum.dev//static/5/800/600",
+        // "https://picsum.dev//static/6/800/600",
     ];
 
     function initPhotoDrum() {
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const slide = document.createElement('div');
             slide.className = `gallery-slide ${index === 0 ? 'active' : ''}`;
             slide.style.backgroundImage = `url(${photo})`;
+            slide.classList.add('image-fit');
             container.appendChild(slide);
 
             const dot = document.createElement('div');

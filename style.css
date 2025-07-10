@@ -372,6 +372,12 @@ body {
 }
 
 /* Фотогалерея */
+.image-fit {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .gallery-section {
   padding: 40px 0;
   background: #f8f9fa;
@@ -718,7 +724,7 @@ body {
 .contacts__info {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
   margin-bottom: 40px;
 }
 
@@ -832,6 +838,7 @@ body {
 
   .hero__logo img {
     max-width: 80%;
+    margin: auto;
   }
 
   .section {
