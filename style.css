@@ -1,9 +1,13 @@
 /* Base styles */
 :root {
-  --primary: #6b864f; /* Зеленый вместо фиолетового */
-  --secondary: #94b670; /* Светло-зеленый */
-  --dark: #212528; /* Темно-зеленый */
-  --light: #f3f2ed; /* Светло-зеленый фон */
+  --primary: #6b864f;
+  /* Зеленый вместо фиолетового */
+  --secondary: #94b670;
+  /* Светло-зеленый */
+  --dark: #212528;
+  /* Темно-зеленый */
+  --light: #f3f2ed;
+  /* Светло-зеленый фон */
   --gray: #757575;
   --white: #ffffff;
   --black: #212121;
@@ -280,11 +284,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    transparent 0%,
-    rgba(90, 143, 61, 0.1) 70%
-  );
+  background: radial-gradient(circle at center,
+      transparent 0%,
+      rgba(90, 143, 61, 0.1) 70%);
   opacity: 0;
   transition: opacity 0.5s ease, background 0.5s ease;
   z-index: 0;
@@ -383,7 +385,7 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-slide {
@@ -422,91 +424,62 @@ body {
 }
 
 /* Спикеры */
-.speakers-section {
-  padding: 60px 0;
-  background: #fff;
-}
-
-.speakers-container {
-  display: flex;
-  justify-content: center;
-  margin: 40px auto;
-  position: relative;
-  height: 200px;
-}
-
-.speaker-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+.speaker-circle {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: absolute;
+  position: relative;
   z-index: 1;
+  will-change: transform, z-index;
 }
 
-.speaker-avatar.active {
-  border-color: #4CAF50;
+.speaker-circle:hover {
   transform: scale(1.1);
-  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.speaker-circle.active {
+  transform: scale(1.15);
+  z-index: 100;
+  box-shadow: 0 0 0 3px currentColor;
+  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    box-shadow 0.3s ease;
+}
+
+.speaker-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: -1.5rem;
 }
 
 .speaker-info {
-  display: none;
-  max-width: 900px;
-  margin: 40px auto;
-  background: #f8f9fa;
-  border-radius: 10px;
-  padding: 30px;
-  grid-template-columns: 200px 1fr 1fr;
-  gap: 30px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
 }
 
 .speaker-info.active {
-  display: grid;
+  max-height: 1000px;
+  opacity: 1;
 }
 
-.speaker-photo {
-  width: 100%;
-  border-radius: 10px;
-}
+@media (max-width: 768px) {
+  .speaker-info-grid {
+    grid-template-columns: 1fr !important;
+  }
 
-.speaker-bio {
-  padding: 15px;
-}
+  .speaker-bio {
+    order: 2;
+  }
 
-.speaker-events {
-  background: rgba(76, 175, 80, 0.1);
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 3px solid #4CAF50;
-}
+  .speaker-events {
+    order: 3;
+  }
 
-.speaker-controls {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.speaker-arrow {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.speaker-arrow:hover {
-  background: #3e8e41;
+  .speaker-photo {
+    order: 1;
+  }
 }
 
 /* Стили для блока цен */
@@ -825,6 +798,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -832,6 +806,7 @@ body {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -839,9 +814,11 @@ body {
   100% {
     transform: translateY(0) translateX(-50%);
   }
+
   40% {
     transform: translateY(-20px) translateX(-50%);
   }
+
   60% {
     transform: translateY(-10px) translateX(-50%);
   }

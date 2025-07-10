@@ -214,95 +214,482 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Данные спикеров
+// Отрисовка спикеров
 const speakers = [
-  {
-    name: "Иван Петров",
-    photo: "https://picsum.dev//static/37/800/600",
-    bio: "Психолог с 10-летним опытом, специалист по семейным отношениям...",
-    events: [
-      "1 августа: Мастер-класс 'Гармония в семье'",
-      "2 августа: Лекция 'Дети и родители'"
-    ]
-  },
-  // Добавьте других спикеров
+    {
+        id: 1,
+        name: "Анна Смирнова",
+        title: "Маркетолог",
+        company: "TechSolutions Inc.",
+        color: "text-purple-500",
+        bgColor: "bg-purple-100",
+        photo: "https://randomuser.me/api/portraits/women/43.jpg",
+        bio: "Анна имеет более 10 лет опыта в цифровом маркетинге. Специализируется на стратегиях роста для технологических стартапов. Автор бестселлера 'Маркетинг в эпоху цифровых технологий'.",
+        events: [
+            "Цифровой маркетинг 2023 - 15 июня",
+            "TechConf - 22 августа",
+            "Стартап Weekend - 5 октября"
+        ]
+    },
+    {
+        id: 2,
+        name: "Иван Петров",
+        title: "Data Scientist",
+        company: "DataMind AI",
+        color: "text-blue-500",
+        bgColor: "bg-blue-100",
+        photo: "https://randomuser.me/api/portraits/men/32.jpg",
+        bio: "Иван - эксперт в области машинного обучения и анализа данных. Разработал несколько инновационных алгоритмов для обработки больших данных. Преподает в ведущих университетах страны.",
+        events: [
+            "AI Conference - 10 июля",
+            "Big Data Summit - 18 сентября",
+            "Tech Future - 12 ноября"
+        ]
+    },
+    {
+        id: 3,
+        name: "Елена Козлова",
+        title: "UX/UI Дизайнер",
+        company: "Creative Minds",
+        color: "text-pink-500",
+        bgColor: "bg-pink-100",
+        photo: "https://randomuser.me/api/portraits/women/65.jpg",
+        bio: "Елена создает интуитивно понятные интерфейсы для сложных систем. Ее работы получили несколько международных наград. Верит, что хороший дизайн должен быть незаметным.",
+        events: [
+            "Design Week - 3 июля",
+            "UX Forum - 21 августа",
+            "Креативные технологии - 8 декабря"
+        ]
+    },
+    {
+        id: 4,
+        name: "Дмитрий Волков",
+        title: "Разработчик блокчейн",
+        company: "ChainTech",
+        color: "text-green-500",
+        bgColor: "bg-green-100",
+        photo: "https://randomuser.me/api/portraits/men/75.jpg",
+        bio: "Дмитрий - один из ведущих экспертов по блокчейн-технологиям в стране. Участвовал в разработке нескольких успешных криптопроектов. Активно продвигает идеи децентрализации.",
+        events: [
+            "Blockchain Expo - 25 июля",
+            "Crypto Future - 14 сентября",
+            "FinTech Conference - 30 ноября"
+        ]
+    },
+    {
+        id: 5,
+        name: "Ольга Новикова",
+        title: "HR Директор",
+        company: "PeopleFirst Corp.",
+        color: "text-yellow-500",
+        bgColor: "bg-yellow-100",
+        photo: "https://randomuser.me/api/portraits/women/33.jpg",
+        bio: "Ольга специализируется на построении корпоративных культур в быстрорастущих компаниях. Разработала уникальную методику подбора персонала для IT-сферы.",
+        events: [
+            "HR Summit - 5 августа",
+            "Управление талантами - 19 октября",
+            "Будущее работы - 15 декабря"
+        ]
+    },
+    {
+        id: 6,
+        name: "Михаил Соколов",
+        title: "Кибербезопасность",
+        company: "SecureNet",
+        color: "text-red-500",
+        bgColor: "bg-red-100",
+        photo: "https://randomuser.me/api/portraits/men/68.jpg",
+        bio: "Михаил - эксперт по информационной безопасности с 15-летним стажем. Провел более 200 аудитов безопасности для крупных корпораций. Автор популярного курса по этичному хакингу.",
+        events: [
+            "Security Days - 12 августа",
+            "Кибербезопасность 2023 - 28 октября",
+            "TechDefence - 10 декабря"
+        ]
+    },
+    {
+        id: 1,
+        name: "Анна Смирнова",
+        title: "Маркетолог",
+        company: "TechSolutions Inc.",
+        color: "text-purple-500",
+        bgColor: "bg-purple-100",
+        photo: "https://randomuser.me/api/portraits/women/43.jpg",
+        bio: "Анна имеет более 10 лет опыта в цифровом маркетинге. Специализируется на стратегиях роста для технологических стартапов. Автор бестселлера 'Маркетинг в эпоху цифровых технологий'.",
+        events: [
+            "Цифровой маркетинг 2023 - 15 июня",
+            "TechConf - 22 августа",
+            "Стартап Weekend - 5 октября"
+        ]
+    },
+    {
+        id: 2,
+        name: "Иван Петров",
+        title: "Data Scientist",
+        company: "DataMind AI",
+        color: "text-blue-500",
+        bgColor: "bg-blue-100",
+        photo: "https://randomuser.me/api/portraits/men/32.jpg",
+        bio: "Иван - эксперт в области машинного обучения и анализа данных. Разработал несколько инновационных алгоритмов для обработки больших данных. Преподает в ведущих университетах страны.",
+        events: [
+            "AI Conference - 10 июля",
+            "Big Data Summit - 18 сентября",
+            "Tech Future - 12 ноября"
+        ]
+    },
+    {
+        id: 3,
+        name: "Елена Козлова",
+        title: "UX/UI Дизайнер",
+        company: "Creative Minds",
+        color: "text-pink-500",
+        bgColor: "bg-pink-100",
+        photo: "https://randomuser.me/api/portraits/women/65.jpg",
+        bio: "Елена создает интуитивно понятные интерфейсы для сложных систем. Ее работы получили несколько международных наград. Верит, что хороший дизайн должен быть незаметным.",
+        events: [
+            "Design Week - 3 июля",
+            "UX Forum - 21 августа",
+            "Креативные технологии - 8 декабря"
+        ]
+    },
+    {
+        id: 4,
+        name: "Дмитрий Волков",
+        title: "Разработчик блокчейн",
+        company: "ChainTech",
+        color: "text-green-500",
+        bgColor: "bg-green-100",
+        photo: "https://randomuser.me/api/portraits/men/75.jpg",
+        bio: "Дмитрий - один из ведущих экспертов по блокчейн-технологиям в стране. Участвовал в разработке нескольких успешных криптопроектов. Активно продвигает идеи децентрализации.",
+        events: [
+            "Blockchain Expo - 25 июля",
+            "Crypto Future - 14 сентября",
+            "FinTech Conference - 30 ноября"
+        ]
+    },
+    {
+        id: 5,
+        name: "Ольга Новикова",
+        title: "HR Директор",
+        company: "PeopleFirst Corp.",
+        color: "text-yellow-500",
+        bgColor: "bg-yellow-100",
+        photo: "https://randomuser.me/api/portraits/women/33.jpg",
+        bio: "Ольга специализируется на построении корпоративных культур в быстрорастущих компаниях. Разработала уникальную методику подбора персонала для IT-сферы.",
+        events: [
+            "HR Summit - 5 августа",
+            "Управление талантами - 19 октября",
+            "Будущее работы - 15 декабря"
+        ]
+    },
+    {
+        id: 6,
+        name: "Михаил Соколов",
+        title: "Кибербезопасность",
+        company: "SecureNet",
+        color: "text-red-500",
+        bgColor: "bg-red-100",
+        photo: "https://randomuser.me/api/portraits/men/68.jpg",
+        bio: "Михаил - эксперт по информационной безопасности с 15-летним стажем. Провел более 200 аудитов безопасности для крупных корпораций. Автор популярного курса по этичному хакингу.",
+        events: [
+            "Security Days - 12 августа",
+            "Кибербезопасность 2023 - 28 октября",
+            "TechDefence - 10 декабря"
+        ]
+    },
+    {
+        id: 1,
+        name: "Анна Смирнова",
+        title: "Маркетолог",
+        company: "TechSolutions Inc.",
+        color: "text-purple-500",
+        bgColor: "bg-purple-100",
+        photo: "https://randomuser.me/api/portraits/women/43.jpg",
+        bio: "Анна имеет более 10 лет опыта в цифровом маркетинге. Специализируется на стратегиях роста для технологических стартапов. Автор бестселлера 'Маркетинг в эпоху цифровых технологий'.",
+        events: [
+            "Цифровой маркетинг 2023 - 15 июня",
+            "TechConf - 22 августа",
+            "Стартап Weekend - 5 октября"
+        ]
+    },
+    {
+        id: 2,
+        name: "Иван Петров",
+        title: "Data Scientist",
+        company: "DataMind AI",
+        color: "text-blue-500",
+        bgColor: "bg-blue-100",
+        photo: "https://randomuser.me/api/portraits/men/32.jpg",
+        bio: "Иван - эксперт в области машинного обучения и анализа данных. Разработал несколько инновационных алгоритмов для обработки больших данных. Преподает в ведущих университетах страны.",
+        events: [
+            "AI Conference - 10 июля",
+            "Big Data Summit - 18 сентября",
+            "Tech Future - 12 ноября"
+        ]
+    },
+    {
+        id: 3,
+        name: "Елена Козлова",
+        title: "UX/UI Дизайнер",
+        company: "Creative Minds",
+        color: "text-pink-500",
+        bgColor: "bg-pink-100",
+        photo: "https://randomuser.me/api/portraits/women/65.jpg",
+        bio: "Елена создает интуитивно понятные интерфейсы для сложных систем. Ее работы получили несколько международных наград. Верит, что хороший дизайн должен быть незаметным.",
+        events: [
+            "Design Week - 3 июля",
+            "UX Forum - 21 августа",
+            "Креативные технологии - 8 декабря"
+        ]
+    },
+    {
+        id: 4,
+        name: "Дмитрий Волков",
+        title: "Разработчик блокчейн",
+        company: "ChainTech",
+        color: "text-green-500",
+        bgColor: "bg-green-100",
+        photo: "https://randomuser.me/api/portraits/men/75.jpg",
+        bio: "Дмитрий - один из ведущих экспертов по блокчейн-технологиям в стране. Участвовал в разработке нескольких успешных криптопроектов. Активно продвигает идеи децентрализации.",
+        events: [
+            "Blockchain Expo - 25 июля",
+            "Crypto Future - 14 сентября",
+            "FinTech Conference - 30 ноября"
+        ]
+    },
+    {
+        id: 5,
+        name: "Ольга Новикова",
+        title: "HR Директор",
+        company: "PeopleFirst Corp.",
+        color: "text-yellow-500",
+        bgColor: "bg-yellow-100",
+        photo: "https://randomuser.me/api/portraits/women/33.jpg",
+        bio: "Ольга специализируется на построении корпоративных культур в быстрорастущих компаниях. Разработала уникальную методику подбора персонала для IT-сферы.",
+        events: [
+            "HR Summit - 5 августа",
+            "Управление талантами - 19 октября",
+            "Будущее работы - 15 декабря"
+        ]
+    },
+    {
+        id: 6,
+        name: "Михаил Соколов",
+        title: "Кибербезопасность",
+        company: "SecureNet",
+        color: "text-red-500",
+        bgColor: "bg-red-100",
+        photo: "https://randomuser.me/api/portraits/men/68.jpg",
+        bio: "Михаил - эксперт по информационной безопасности с 15-летним стажем. Провел более 200 аудитов безопасности для крупных корпораций. Автор популярного курса по этичному хакингу.",
+        events: [
+            "Security Days - 12 августа",
+            "Кибербезопасность 2023 - 28 октября",
+            "TechDefence - 10 декабря"
+        ]
+    },
+    {
+        id: 1,
+        name: "Анна Смирнова",
+        title: "Маркетолог",
+        company: "TechSolutions Inc.",
+        color: "text-purple-500",
+        bgColor: "bg-purple-100",
+        photo: "https://randomuser.me/api/portraits/women/43.jpg",
+        bio: "Анна имеет более 10 лет опыта в цифровом маркетинге. Специализируется на стратегиях роста для технологических стартапов. Автор бестселлера 'Маркетинг в эпоху цифровых технологий'.",
+        events: [
+            "Цифровой маркетинг 2023 - 15 июня",
+            "TechConf - 22 августа",
+            "Стартап Weekend - 5 октября"
+        ]
+    },
+    {
+        id: 2,
+        name: "Иван Петров",
+        title: "Data Scientist",
+        company: "DataMind AI",
+        color: "text-blue-500",
+        bgColor: "bg-blue-100",
+        photo: "https://randomuser.me/api/portraits/men/32.jpg",
+        bio: "Иван - эксперт в области машинного обучения и анализа данных. Разработал несколько инновационных алгоритмов для обработки больших данных. Преподает в ведущих университетах страны.",
+        events: [
+            "AI Conference - 10 июля",
+            "Big Data Summit - 18 сентября",
+            "Tech Future - 12 ноября"
+        ]
+    },
+    {
+        id: 3,
+        name: "Елена Козлова",
+        title: "UX/UI Дизайнер",
+        company: "Creative Minds",
+        color: "text-pink-500",
+        bgColor: "bg-pink-100",
+        photo: "https://randomuser.me/api/portraits/women/65.jpg",
+        bio: "Елена создает интуитивно понятные интерфейсы для сложных систем. Ее работы получили несколько международных наград. Верит, что хороший дизайн должен быть незаметным.",
+        events: [
+            "Design Week - 3 июля",
+            "UX Forum - 21 августа",
+            "Креативные технологии - 8 декабря"
+        ]
+    },
+    {
+        id: 4,
+        name: "Дмитрий Волков",
+        title: "Разработчик блокчейн",
+        company: "ChainTech",
+        color: "text-green-500",
+        bgColor: "bg-green-100",
+        photo: "https://randomuser.me/api/portraits/men/75.jpg",
+        bio: "Дмитрий - один из ведущих экспертов по блокчейн-технологиям в стране. Участвовал в разработке нескольких успешных криптопроектов. Активно продвигает идеи децентрализации.",
+        events: [
+            "Blockchain Expo - 25 июля",
+            "Crypto Future - 14 сентября",
+            "FinTech Conference - 30 ноября"
+        ]
+    },
+    {
+        id: 5,
+        name: "Ольга Новикова",
+        title: "HR Директор",
+        company: "PeopleFirst Corp.",
+        color: "text-yellow-500",
+        bgColor: "bg-yellow-100",
+        photo: "https://randomuser.me/api/portraits/women/33.jpg",
+        bio: "Ольга специализируется на построении корпоративных культур в быстрорастущих компаниях. Разработала уникальную методику подбора персонала для IT-сферы.",
+        events: [
+            "HR Summit - 5 августа",
+            "Управление талантами - 19 октября",
+            "Будущее работы - 15 декабря"
+        ]
+    },
+    {
+        id: 6,
+        name: "Михаил Соколов",
+        title: "Кибербезопасность",
+        company: "SecureNet",
+        color: "text-red-500",
+        bgColor: "bg-red-100",
+        photo: "https://randomuser.me/api/portraits/men/68.jpg",
+        bio: "Михаил - эксперт по информационной безопасности с 15-летним стажем. Провел более 200 аудитов безопасности для крупных корпораций. Автор популярного курса по этичному хакингу.",
+        events: [
+            "Security Days - 12 августа",
+            "Кибербезопасность 2023 - 28 октября",
+            "TechDefence - 10 декабря"
+        ]
+    },
+
 ];
 
-function initSpeakers() {
-  const container = document.getElementById('speakersContainer');
-  const infoContainer = document.getElementById('speakerInfo');
-  
-  // Создаем аватары спикеров
-  speakers.forEach((speaker, index) => {
-    const avatar = document.createElement('img');
-    avatar.className = 'speaker-avatar';
-    avatar.src = speaker.photo;
-    avatar.alt = speaker.name;
-    avatar.dataset.index = index;
-    
-    // Позиционируем аватары с небольшим смещением
-    avatar.style.left = `${100 + index * 80}px`;
-    avatar.style.top = `${index % 2 === 0 ? 40 : 60}px`;
-    
-    avatar.addEventListener('click', () => showSpeakerInfo(index));
-    container.appendChild(avatar);
-  });
-  
-  // Инициализация первого спикера
-  if (speakers.length > 0) {
-    document.querySelector('.speaker-avatar').classList.add('active');
-    showSpeakerInfo(0);
-  }
-  
-  // Управление стрелками
-  let currentSpeaker = 0;
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
-  
-  function updateSpeaker(index) {
-    document.querySelector('.speaker-avatar.active').classList.remove('active');
-    currentSpeaker = index;
-    document.querySelectorAll('.speaker-avatar')[currentSpeaker].classList.add('active');
-    showSpeakerInfo(currentSpeaker);
-  }
-  
-  prevBtn.addEventListener('click', () => {
-    const newIndex = (currentSpeaker - 1 + speakers.length) % speakers.length;
-    updateSpeaker(newIndex);
-  });
-  
-  nextBtn.addEventListener('click', () => {
-    const newIndex = (currentSpeaker + 1) % speakers.length;
-    updateSpeaker(newIndex);
-  });
+function renderSpeakers() {
+    const container = document.getElementById('speakers-container');
+    container.innerHTML = '';
+
+    let currentRow = document.createElement('div');
+    currentRow.className = 'speaker-row';
+    container.appendChild(currentRow);
+
+    let rowWidth = 0;
+    const circleSize = 80; // Размер кружка
+    const overlap = 20; // Перекрытие
+
+    speakers.forEach((speaker, index) => {
+        const speakerElement = document.createElement('div');
+        speakerElement.className = `speaker-circle rounded-full ${speaker.color} ${speaker.bgColor} w-20 h-20 flex items-center justify-center border-4 border-white mr-${-overlap / 2} ml-${-overlap / 2}`;
+        speakerElement.style.marginRight = `-${overlap}px`;
+        speakerElement.innerHTML = `
+                    <img src="${speaker.photo}" alt="${speaker.name}" class="w-full h-full rounded-full object-cover">
+                `;
+
+        // Расчет ширины ряда
+        rowWidth += circleSize - overlap;
+
+        // Если не помещается в текущий ряд, создаем новый
+        if (rowWidth > container.offsetWidth && index > 0) {
+            currentRow = document.createElement('div');
+            currentRow.className = 'speaker-row';
+            container.appendChild(currentRow);
+            rowWidth = circleSize;
+        }
+
+        currentRow.appendChild(speakerElement);
+
+        // Обработчик клика
+        speakerElement.addEventListener('click', () => {
+            // Плавное переключение активного спикера
+            const prevActive = document.querySelector('.speaker-circle.active');
+            if (prevActive) {
+                prevActive.classList.remove('active');
+                setTimeout(() => {
+                    speakerElement.classList.add('active');
+                    renderSpeakerInfo(speaker);
+                }, 50); // Небольшая задержка для плавности
+            } else {
+                speakerElement.classList.add('active');
+                renderSpeakerInfo(speaker);
+            }
+        });
+    });
 }
 
-function showSpeakerInfo(index) {
-  const speaker = speakers[index];
-  const infoContainer = document.getElementById('speakerInfo');
-  
-  infoContainer.innerHTML = `
-    <div class="speaker-photo-container">
-      <img src="${speaker.photo}" alt="${speaker.name}" class="speaker-photo">
-    </div>
-    <div class="speaker-bio">
-      <h3>${speaker.name}</h3>
-      <p>${speaker.bio}</p>
-    </div>
-    <div class="speaker-events">
-      <h4>Мероприятия:</h4>
-      <ul>
-        ${speaker.events.map(event => `<li>${event}</li>`).join('')}
-      </ul>
-    </div>
-  `;
-  
-  infoContainer.classList.add('active');
-  
-  // Обновляем активный аватар
-  document.querySelector('.speaker-avatar.active').classList.remove('active');
-  document.querySelectorAll('.speaker-avatar')[index].classList.add('active');
+// Отрисовка информации о спикере
+function renderSpeakerInfo(speaker) {
+    const container = document.getElementById('speaker-info-container');
+    container.className = `speaker-info bg-white rounded-xl shadow-lg overflow-hidden ${speaker.bgColor} bg-opacity-20 mb-12`;
+    container.innerHTML = `
+                <div class="speaker-info-grid grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
+                    <div class="speaker-photo flex flex-col items-center">
+                        <img src="${speaker.photo}" alt="${speaker.name}" class="w-64 h-64 rounded-full object-cover border-4 ${speaker.color} border-opacity-50 mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">${speaker.name}</h3>
+                        <p class="text-lg ${speaker.color}">${speaker.title}</p>
+                        <p class="text-gray-600">${speaker.company}</p>
+                    </div>
+                    
+                    <div class="speaker-bio">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-user ${speaker.color} mr-2"></i> Биография
+                        </h4>
+                        <p class="text-gray-700 leading-relaxed">${speaker.bio}</p>
+                    </div>
+                    
+                    <div class="speaker-events">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-calendar-alt ${speaker.color} mr-2"></i> Мероприятия
+                        </h4>
+                        <ul class="space-y-3">
+                            ${speaker.events.map(event => `
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs mt-2 mr-2 ${speaker.color} opacity-70"></i>
+                                    <span class="text-gray-700">${event}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+    // Показываем контейнер с информацией
+    container.classList.add('active');
 }
 
-// Инициализация при загрузке
-document.addEventListener('DOMContentLoaded', initSpeakers);
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    renderSpeakers();
+
+    // При изменении размера окна перерисовываем спикеров
+    window.addEventListener('resize', () => {
+        renderSpeakers();
+    });
+
+    // Клик по первому спикеру при загрузке
+    setTimeout(() => {
+        const firstSpeaker = document.querySelector('.speaker-circle');
+        if (firstSpeaker) {
+            firstSpeaker.click();
+        }
+    }, 300);
+});
+
+// Функция для добавления нового спикера (пример использования)
+function addNewSpeaker(newSpeaker) {
+    speakers.push(newSpeaker);
+    renderSpeakers();
+}

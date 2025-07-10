@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -175,12 +176,17 @@
 
     <section class="speakers-section">
       <div class="container">
-        <h2 class="section-title">Наши спикеры</h2>
-        <div class="speakers-container" id="speakersContainer"></div>
-        <div class="speaker-info" id="speakerInfo"></div>
-        <div class="speaker-controls">
-          <button class="speaker-arrow prev">←</button>
-          <button class="speaker-arrow next">→</button>
+        <div class="max-w-7xl mx-auto">
+          <h1 class="text-4xl font-bold text-center text-gray-800 mb-2">Наши спикеры</h1>
+          <p class="text-lg text-center text-gray-600 mb-12">Кликните на фото спикера для подробной информации</p>
+
+          <!-- Спикеры будут отображаться здесь -->
+          <div id="speakers-container" class="mb-16"></div>
+
+          <!-- Информация о спикере -->
+          <div id="speaker-info-container" class="speaker-info bg-white rounded-xl shadow-lg overflow-hidden">
+            <!-- Контент будет заполняться динамически -->
+          </div>
         </div>
       </div>
     </section>
