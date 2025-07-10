@@ -1,63 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Конфигурация галереи
-    const galleryPhotos = [
-        "https://picsum.dev//static/42/800/600",
-        // "https://picsum.dev//static/1/800/600",
-        // "https://picsum.dev//static/2/800/600",
-        // "https://picsum.dev//static/3/800/600",
-        // "https://picsum.dev//static/4/800/600",
-        // "https://picsum.dev//static/5/800/600",
-        // "https://picsum.dev//static/6/800/600",
-    ];
-
-    function initPhotoDrum() {
-        const container = document.getElementById('photoDrum');
-        const dotsContainer = document.getElementById('galleryDots');
-        let interval = runInterval();
-        // Создаем слайды
-        galleryPhotos.forEach((photo, index) => {
-            const slide = document.createElement('div');
-            slide.className = `gallery-slide ${index === 0 ? 'active' : ''}`;
-            slide.style.backgroundImage = `url(${photo})`;
-            slide.classList.add('image-fit');
-            container.appendChild(slide);
-
-            const dot = document.createElement('div');
-            dot.className = `gallery-dot ${index === 0 ? 'active' : ''}`;
-            dot.dataset.index = index;
-            dot.addEventListener('click', () => {
-                goToSlide(index);
-                clearInterval(interval);
-                interval = runInterval();
-            });
-            dotsContainer.appendChild(dot);
-        });
-
-        // Автопереключение
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.gallery-slide');
-        const dots = document.querySelectorAll('.gallery-dot');
-
-        function goToSlide(index) {
-            slides[currentIndex].classList.remove('active');
-            dots[currentIndex].classList.remove('active');
-            currentIndex = index;
-            slides[currentIndex].classList.add('active');
-            dots[currentIndex].classList.add('active');
-        }
-
-        function runInterval() {
-            return setInterval(() => {
-                const nextIndex = (currentIndex + 1) % galleryPhotos.length;
-                goToSlide(nextIndex);
-            }, 7000);
-        }
-
-        interval.stop
-    }
-
-    initPhotoDrum();
-
     // Параллакс эффект для героя
     const parallaxBg = document.getElementById('parallax-bg');
 
@@ -694,3 +635,74 @@ function addNewSpeaker(newSpeaker) {
     speakers.push(newSpeaker);
     renderSpeakers();
 }
+
+// Конфигурация галереи
+const drumPhotos = [
+        "./images/photos/1.jpg",
+        "./images/photos/2.jpg",
+        "./images/photos/3.jpg",
+        "./images/photos/4.jpg",
+        "./images/photos/5.jpg",
+        "./images/photos/6.jpg",
+        "./images/photos/7.jpg",
+        "./images/photos/8.jpg",
+        "./images/photos/9.jpg",
+        "./images/photos/10.jpg",
+    ];
+
+function initPhotoDrum() {
+  const track = document.getElementById('drumTrack');
+  const pagination = document.getElementById('drumPagination');
+  let currentIndex = 0;
+  let autoScrollInterval;
+  const slideCount = drumPhotos.length;
+
+  // Создаем слайды
+  drumPhotos.forEach((photo, index) => {
+    // Добавляем слайд
+    const slide = document.createElement('div');
+    slide.className = 'drum-slide';
+    slide.innerHTML = `<img src="${photo}" class="drum-image" alt="Фото ${index + 1}">`;
+    track.appendChild(slide);
+
+    // Добавляем точку пагинации
+    const dot = document.createElement('div');
+    dot.className = 'drum-dot';
+    dot.dataset.index = index;
+    dot.addEventListener('click', () => goToSlide(index));
+    pagination.appendChild(dot);
+  });
+
+  // Функция переключения слайда
+  function goToSlide(index) {
+    currentIndex = index;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+    // Обновляем активную точку
+    document.querySelectorAll('.drum-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+    
+    // Сбрасываем таймер автопрокрутки
+    resetAutoScroll();
+  }
+
+  // Автопрокрутка
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % slideCount;
+      goToSlide(nextIndex);
+    }, 7000);
+  }
+
+  function resetAutoScroll() {
+    clearInterval(autoScrollInterval);
+    startAutoScroll();
+  }
+
+  // Инициализация
+  goToSlide(0);
+}
+
+// Запускаем при загрузке страницы
+document.addEventListener('DOMContentLoaded', initPhotoDrum);
