@@ -1,4 +1,62 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Конфигурация галереи
+    const galleryPhotos = [
+        "https://picsum.dev//static/42/800/600",
+        "https://picsum.dev//static/1/800/600",
+        "https://picsum.dev//static/2/800/600",
+        "https://picsum.dev//static/3/800/600",
+        "https://picsum.dev//static/4/800/600",
+        "https://picsum.dev//static/5/800/600",
+        "https://picsum.dev//static/6/800/600",
+    ];
+
+    function initPhotoDrum() {
+        const container = document.getElementById('photoDrum');
+        const dotsContainer = document.getElementById('galleryDots');
+        let interval = runInterval();
+        // Создаем слайды
+        galleryPhotos.forEach((photo, index) => {
+            const slide = document.createElement('div');
+            slide.className = `gallery-slide ${index === 0 ? 'active' : ''}`;
+            slide.style.backgroundImage = `url(${photo})`;
+            container.appendChild(slide);
+
+            const dot = document.createElement('div');
+            dot.className = `gallery-dot ${index === 0 ? 'active' : ''}`;
+            dot.dataset.index = index;
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                clearInterval(interval);
+                interval = runInterval();
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        // Автопереключение
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.gallery-slide');
+        const dots = document.querySelectorAll('.gallery-dot');
+
+        function goToSlide(index) {
+            slides[currentIndex].classList.remove('active');
+            dots[currentIndex].classList.remove('active');
+            currentIndex = index;
+            slides[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        function runInterval() {
+            return setInterval(() => {
+                const nextIndex = (currentIndex + 1) % galleryPhotos.length;
+                goToSlide(nextIndex);
+            }, 7000);
+        }
+
+        interval.stop
+    }
+
+    initPhotoDrum();
+
     // Параллакс эффект для героя
     const parallaxBg = document.getElementById('parallax-bg');
 
@@ -155,3 +213,96 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// Данные спикеров
+const speakers = [
+  {
+    name: "Иван Петров",
+    photo: "https://picsum.dev//static/37/800/600",
+    bio: "Психолог с 10-летним опытом, специалист по семейным отношениям...",
+    events: [
+      "1 августа: Мастер-класс 'Гармония в семье'",
+      "2 августа: Лекция 'Дети и родители'"
+    ]
+  },
+  // Добавьте других спикеров
+];
+
+function initSpeakers() {
+  const container = document.getElementById('speakersContainer');
+  const infoContainer = document.getElementById('speakerInfo');
+  
+  // Создаем аватары спикеров
+  speakers.forEach((speaker, index) => {
+    const avatar = document.createElement('img');
+    avatar.className = 'speaker-avatar';
+    avatar.src = speaker.photo;
+    avatar.alt = speaker.name;
+    avatar.dataset.index = index;
+    
+    // Позиционируем аватары с небольшим смещением
+    avatar.style.left = `${100 + index * 80}px`;
+    avatar.style.top = `${index % 2 === 0 ? 40 : 60}px`;
+    
+    avatar.addEventListener('click', () => showSpeakerInfo(index));
+    container.appendChild(avatar);
+  });
+  
+  // Инициализация первого спикера
+  if (speakers.length > 0) {
+    document.querySelector('.speaker-avatar').classList.add('active');
+    showSpeakerInfo(0);
+  }
+  
+  // Управление стрелками
+  let currentSpeaker = 0;
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  
+  function updateSpeaker(index) {
+    document.querySelector('.speaker-avatar.active').classList.remove('active');
+    currentSpeaker = index;
+    document.querySelectorAll('.speaker-avatar')[currentSpeaker].classList.add('active');
+    showSpeakerInfo(currentSpeaker);
+  }
+  
+  prevBtn.addEventListener('click', () => {
+    const newIndex = (currentSpeaker - 1 + speakers.length) % speakers.length;
+    updateSpeaker(newIndex);
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    const newIndex = (currentSpeaker + 1) % speakers.length;
+    updateSpeaker(newIndex);
+  });
+}
+
+function showSpeakerInfo(index) {
+  const speaker = speakers[index];
+  const infoContainer = document.getElementById('speakerInfo');
+  
+  infoContainer.innerHTML = `
+    <div class="speaker-photo-container">
+      <img src="${speaker.photo}" alt="${speaker.name}" class="speaker-photo">
+    </div>
+    <div class="speaker-bio">
+      <h3>${speaker.name}</h3>
+      <p>${speaker.bio}</p>
+    </div>
+    <div class="speaker-events">
+      <h4>Мероприятия:</h4>
+      <ul>
+        ${speaker.events.map(event => `<li>${event}</li>`).join('')}
+      </ul>
+    </div>
+  `;
+  
+  infoContainer.classList.add('active');
+  
+  // Обновляем активный аватар
+  document.querySelector('.speaker-avatar.active').classList.remove('active');
+  document.querySelectorAll('.speaker-avatar')[index].classList.add('active');
+}
+
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', initSpeakers);
