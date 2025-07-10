@@ -38,6 +38,7 @@
             <a href="#speakers" class="header__link">Спикеры</a>
             <a href="#partners" class="header__link">Партнеры</a>
             <a href="#tickets" class="header__link">Оплата</a>
+            <a href="#place" class="header__link">Место проведения</a>
             <a href="#map" class="header__link">Схема проезда</a>
             <a href="#contacts" class="header__link">Контакты</a>
           </nav>
@@ -187,17 +188,10 @@
         <div class="program__glow"></div>
       </section>
 
-      <section class="photo-drum-section">
-        <div class="drum-container">
-          <div class="drum-track" id="drumTrack"></div>
-        </div>
-        <div class="drum-pagination" id="drumPagination"></div>
-      </section>
-
       <section class="speakers-section section" id="speakers">
         <div class="container">
           <div class="max-w-7xl mx-auto">
-            <h1 class="section__title">Наши спикеры</h1>
+            <h1 class="section__title">Спикеры</h1>
             <p class="text-lg text-center text-gray-600 mb-12">
               Кликните на фото спикера для подробной информации
             </p>
@@ -209,6 +203,28 @@
             <div
               id="speaker-info-container"
               class="speaker-info bg-white rounded-xl shadow-lg overflow-hidden"
+            >
+              <!-- Контент будет заполняться динамически -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="masters-section section" id="masters">
+        <div class="container">
+          <div class="max-w-7xl mx-auto">
+            <h1 class="section__title">Мастера практик</h1>
+            <p class="text-lg text-center text-gray-600 mb-12">
+              Кликните на фото мастера для подробной информации
+            </p>
+
+            <!-- Спикеры будут отображаться здесь -->
+            <div id="masters-container" class="mb-16"></div>
+
+            <!-- Информация о спикере -->
+            <div
+              id="master-info-container"
+              class="master-info bg-white rounded-xl shadow-lg overflow-hidden"
             >
               <!-- Контент будет заполняться динамически -->
             </div>
@@ -377,23 +393,39 @@
         </div>
       </section> -->
 
+      <section class="section place" id="place">
+        <div class="container">
+          <div class="section__inner">
+            <h2 class="section__title">Место проведения</h2>
+            <div class="section__content"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="photo-drum-section">
+        <div class="drum-container">
+          <div class="drum-track" id="drumTrack"></div>
+        </div>
+        <div class="drum-pagination" id="drumPagination"></div>
+      </section>
+
       <section class="section contacts" id="map">
         <div class="container">
           <div class="section__inner">
             <h2 class="section__title">Схема проезда</h2>
             <div class="section__content">
+              <div class="contact mb-6">
+                <div class="contact__icon">📍</div>
+                <div class="contact__text">
+                  г. Воронеж, село Горожанка, ретритный центр «Новая земля».
+                </div>
+              </div>
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A494e9aff3ed5af6f9a7e9b40f05b58d179e4fcc24974491d0883f3378a70c9d9&amp;source=constructor"
                 height="400"
                 width="100%"
                 frameborder="0"
               ></iframe>
-              <div class="contact">
-                <div class="contact__icon">📍</div>
-                <div class="contact__text">
-                  г. Воронеж, село Горожанка, ретритный центр «Новая земля».
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -174,7 +174,7 @@ body {
 
 /* Section styles */
 .section {
-  padding: 100px 0;
+  padding: 35px 0;
   position: relative;
 }
 
@@ -452,7 +452,7 @@ body {
 }
 
 /* Спикеры */
-.speaker-circle {
+.speaker-circle, .mater-circle {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -460,12 +460,12 @@ body {
   will-change: transform, z-index;
 }
 
-.speaker-circle:hover {
+.speaker-circle:hover, .master-circle:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
-.speaker-circle.active {
+.speaker-circle.active, .master-circle.active {
   transform: scale(1.15);
   z-index: 100;
   box-shadow: 0 0 0 3px currentColor;
@@ -473,21 +473,21 @@ body {
     box-shadow 0.3s ease;
 }
 
-.speaker-row {
+.speaker-row, .master-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: -1.5rem;
 }
 
-.speaker-info {
+.speaker-info, .master-info {
   transition: all 0.4s ease;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
 }
 
-.speaker-info.active {
+.speaker-info.active, .master-info.active {
   max-height: 1000px;
   opacity: 1;
 }
@@ -497,15 +497,15 @@ body {
     grid-template-columns: 1fr !important;
   }
 
-  .speaker-bio {
+  .speaker-bio, .master-bio {
     order: 2;
   }
 
-  .speaker-events {
+  .speaker-events, .master-events {
     order: 3;
   }
 
-  .speaker-photo {
+  .speaker-photo, .master-photo {
     order: 1;
   }
 }
@@ -872,7 +872,7 @@ body {
   }
 
   .section {
-    padding: 70px 0;
+    padding: 20px 0;
   }
 
   .section__title {
