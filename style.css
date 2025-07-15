@@ -495,8 +495,12 @@ body {
 }
 
 .speaker-info.active, .master-info.active {
-  max-height: 1000px;
+  max-height: 3000px;
   opacity: 1;
+}
+
+.person-title, .person-name {
+  text-align: center;
 }
 
 @media (max-width: 768px) {

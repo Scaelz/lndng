@@ -200,17 +200,17 @@ const speakers = [
     name: "Лариса Николаева",
     title: "Организатор и эксперт фестиваля",
     company: "",
-    color: "text-pink-500",
-    bgColor: "bg-pink-100",
+    color: "text-purple-500",
+    bgColor: "bg-purple-100",
     photo: "images/speakers/larisa.jpg",
     bio: `Буду для вас маяком на пути к счастливой семейной  жизни! 🏠 👫
 <br>
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-pink-500 opacity-70"></i> кризисный психолог
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-pink-500 opacity-70"></i> гипнолог
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-pink-500 opacity-70"></i> мастер телесных практик
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-pink-500 opacity-70"></i> автор курса "Точка опоры"
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-pink-500 opacity-70"></i> мама пятерых детей
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-pink-500 opacity-70"></i> и...нахожусь в 30-летнем семейном  союзе с любимым человеком 🕺🏼💞`,
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> кризисный психолог
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> гипнолог
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> мастер телесных практик
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> автор курса "Точка опоры"
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> мама пятерых детей
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> и...нахожусь в 30-летнем семейном  союзе с любимым человеком 🕺🏼💞`,
     events: [
       `Практический мастер-класс "Секреты семейной жизни" (сб, вс):
       <br>- Мы узнаем об этапах создания прочных взаимоотношений от знакомства до воспитания счастливых потомков👶🏼
@@ -229,17 +229,17 @@ const masters = [
     name: "Татьяна Чурсина",
     title: "Организатор и эксперт фестиваля",
     company: "",
-    color: "text-blue-500",
-    bgColor: "bg-blue-100",
+    color: "text-purple-500",
+    bgColor: "bg-purple-100",
     photo: "images/speakers/tanya.jpg",
     bio: `Проводник в мир гармонии, движения и саморазвития!
 <br>
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500 opacity-70"></i> организатор мероприятий и ретритов
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500 opacity-70"></i> ведущая медитаций, т-игр и практик (в т.ч. телесных)
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500 opacity-70"></i> инструктор по йоге 
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500 opacity-70"></i> фитнес-тренер
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500 opacity-70"></i> проводник гвоздестояния 
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-blue-500 opacity-70"></i> цифровой психолог `,
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> организатор мероприятий и ретритов
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> ведущая медитаций, т-игр и практик (в т.ч. телесных)
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> инструктор по йоге 
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> фитнес-тренер
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> проводник гвоздестояния 
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> цифровой психолог `,
     events: [
       `практику состояния в пятницу`,
       `практику йоги (в сб и вс утром)`,
@@ -319,9 +319,9 @@ function drawSpeakers(entity, list) {
                         <img src="${speaker.photo}" alt="${speaker.name
       }" class="w-64 h-128 rounded-lg object-cover border-4 ${speaker.color
       } border-opacity-50 mb-6">
-                        <h3 class="text-2xl font-bold text-gray-800">${speaker.name
+                        <h3 class="person-name text-2xl font-bold text-gray-800">${speaker.name
       }</h3>
-                        <p class="text-lg ${speaker.color}">${speaker.title}</p>
+                        <p class="person-title text-lg ${speaker.color}">${speaker.title}</p>
                         <p class="text-gray-600">${speaker.company}</p>
                     </div>
                     
