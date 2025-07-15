@@ -47,8 +47,12 @@ body {
 }
 
 .header_title {
-  font-size: 22px;
-  font-weight: bolder;
+    display: flex;
+    width: 210px;
+    justify-content: start;
+    font-size: 22px;
+    font-weight: bolder;
+    align-items: center;
 }
 
 .header__inner {
