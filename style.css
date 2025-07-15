@@ -55,6 +55,10 @@ body {
     align-items: center;
 }
 
+.header_logo {
+  height: 22px;
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
