@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.accordion-btn').forEach(button => {
     button.addEventListener('click', () => {
-      debugger
       const item = button.closest('.partner__description');
       const content = item.querySelector('.partner__description__extra');
       const arrow = button.querySelector('svg');
