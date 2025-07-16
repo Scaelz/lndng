@@ -51,12 +51,12 @@ body {
 }
 
 .header_title {
-    display: flex;
-    width: 210px;
-    justify-content: start;
-    font-size: 22px;
-    font-weight: bolder;
-    align-items: center;
+  display: flex;
+  width: 210px;
+  justify-content: start;
+  font-size: 22px;
+  font-weight: bolder;
+  align-items: center;
 }
 
 .header_logo {
@@ -308,11 +308,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    transparent 0%,
-    rgba(90, 143, 61, 0.1) 70%
-  );
+  background: radial-gradient(circle at center,
+      transparent 0%,
+      rgba(90, 143, 61, 0.1) 70%);
   opacity: 0;
   transition: opacity 0.5s ease, background 0.5s ease;
   z-index: 0;
@@ -398,11 +396,9 @@ body {
 }
 
 /* Фотогалерея */
-.photo-drum-section {
+.drum {
   padding: 40px 20px;
   background: #f8f9fa;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .drum-container {
@@ -410,14 +406,14 @@ body {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  aspect-ratio: 16/9; /* Сохраняем соотношение сторон */
+  aspect-ratio: 16/9;
+  /* Сохраняем соотношение сторон */
 }
 
 .drum-track {
   display: flex;
   height: 100%;
-  transition: transform 0.5s ease;
+  transition: transform 0.85s ease;
 }
 
 .drum-slide {
@@ -426,13 +422,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
 }
 
 .drum-image {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Сохраняем пропорции без обрезки */
+  object-fit: contain;
+  /* Сохраняем пропорции без обрезки */
 }
 
 .drum-pagination {
@@ -458,12 +454,14 @@ body {
 
 @media (max-width: 768px) {
   .drum-container {
-    aspect-ratio: 4/3; /* Меняем соотношение на мобильных */
+    aspect-ratio: 4/3;
+    /* Меняем соотношение на мобильных */
   }
 }
 
 /* Спикеры */
-.speaker-circle, .mater-circle {
+.speaker-circle,
+.mater-circle {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -471,12 +469,14 @@ body {
   will-change: transform, z-index;
 }
 
-.speaker-circle:hover, .master-circle:hover {
+.speaker-circle:hover,
+.master-circle:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
-.speaker-circle.active, .master-circle.active {
+.speaker-circle.active,
+.master-circle.active {
   transform: scale(1.15);
   z-index: 100;
   box-shadow: 0 0 0 3px currentColor;
@@ -484,26 +484,30 @@ body {
     box-shadow 0.3s ease;
 }
 
-.speaker-row, .master-row {
+.speaker-row,
+.master-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: -1.5rem;
 }
 
-.speaker-info, .master-info {
+.speaker-info,
+.master-info {
   transition: all 0.4s ease;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
 }
 
-.speaker-info.active, .master-info.active {
+.speaker-info.active,
+.master-info.active {
   max-height: 3000px;
   opacity: 1;
 }
 
-.person-title, .person-name {
+.person-title,
+.person-name {
   text-align: center;
 }
 
@@ -512,15 +516,18 @@ body {
     grid-template-columns: 1fr !important;
   }
 
-  .speaker-bio, .master-bio {
+  .speaker-bio,
+  .master-bio {
     order: 2;
   }
 
-  .speaker-events, .master-events {
+  .speaker-events,
+  .master-events {
     order: 3;
   }
 
-  .speaker-photo, .master-photo {
+  .speaker-photo,
+  .master-photo {
     order: 1;
   }
 }
@@ -783,23 +790,28 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: #000; /* Черный цвет иконки по умолчанию */
+  color: #000;
+  /* Черный цвет иконки по умолчанию */
   background-color: transparent;
   transition: all 0.3s ease;
 }
 
 /* VK - синий круг с белой иконкой при наведении */
 .vk-link {
-  color: #4c75a3; /* Цвет VK */
+  color: #4c75a3;
+  /* Цвет VK */
 }
+
 .vk-link:hover {
   transform: scale(1.1);
 }
 
 /* Telegram - голубой круг с белой иконкой при наведении */
 .tg-link {
-  color: #2aabee; /* Цвет Telegram */
+  color: #2aabee;
+  /* Цвет Telegram */
 }
+
 .tg-link:hover {
   transform: scale(1.1);
 }
@@ -858,6 +870,7 @@ body {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -1007,22 +1020,53 @@ body {
   display: flex;
 }
 
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
   .partners__container {
     flex-direction: column;
     align-items: center;
   }
+
+  .partner__photo {
+    height: auto;
+  }
 }
 
 .partner__photo {
-  max-width: min(100%, 400px); /* Изображение не превысит ширину родителя */
-  height: auto;    /* Сохраняет пропорции */
+  max-width: min(100%, 400px);
+  /* Изображение не превысит ширину родителя */
+  height: 400px;
   display: block;
   object-fit: cover;
 }
 
-.partner__desc {
+.partner__description {
+  max-height: 400px;
+  overflow: overlay;
+  padding: 0 2rem;
   flex-grow: 1;
+}
+
+.accordion-btn {
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.partner__description__extra {
+  overflow: hidden;
+  transition: all 700ms;
+}
+
+@media (min-width: 1024px) {
+  .partner__description__extra {
+    max-height: 2000px !important;
+  }
+
+  .accordion-btn {
+    visibility: hidden;
+  }
 }
 
 .partners__grid {
