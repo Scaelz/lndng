@@ -256,7 +256,7 @@ const masters = [
 <br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> инструктор по йоге 
 <br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> фитнес-тренер
 <br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> проводник гвоздестояния 
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> цифровой коуч `,
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> цифровой коуч`,
     events: [
       `практику состояния в пятницу`,
       `практику йоги (в сб и вс утром)`,
@@ -482,7 +482,7 @@ document.getElementById("ticketForm").addEventListener("submit", async (e) => {
   const formData = new FormData(e.target);
   
   try {
-    const response = await fetch("http://localhost:3000/api/submit-ticket", {
+    const response = await fetch("https://the-serv.onrender.com/api/submit-ticket", {
       method: "POST",
       body: formData, // Не указывайте Content-Type вручную для FormData!
     });
