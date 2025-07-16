@@ -392,11 +392,9 @@ body {
 }
 
 /* Фотогалерея */
-.photo-drum-section {
+.drum {
   padding: 40px 20px;
   background: #f8f9fa;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .drum-container {
@@ -404,7 +402,6 @@ body {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   aspect-ratio: 16/9;
   /* Сохраняем соотношение сторон */
 }
@@ -412,7 +409,7 @@ body {
 .drum-track {
   display: flex;
   height: 100%;
-  transition: transform 0.5s ease;
+  transition: transform 0.85s ease;
 }
 
 .drum-slide {
@@ -421,7 +418,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
 }
 
 .drum-image {
@@ -1063,6 +1059,7 @@ body {
   .partner__description__extra {
     max-height: 2000px !important;
   }
+
   .accordion-btn {
     visibility: hidden;
   }
