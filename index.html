@@ -214,74 +214,81 @@
       </div>
     </section>
 
-<div class="max-w-md mx-auto my-8">
-  <!-- Заголовок с кнопкой -->
-  <button 
-    onclick="toggleAccordion('partner-info')"
-    class="flex justify-between items-center w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-all"
-  >
-    <span class="font-medium">Информация о партнёре</span>
-    <svg id="partner-info-arrow" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
-
-  <!-- Скрытый контент -->
-  <div id="partner-info" class="hidden px-4 py-3 bg-gray-50 rounded-b-lg">
-    <p class="text-gray-700">Здесь ваша большая информация о партнёре...</p>
-    <p class="mt-2 text-gray-700">Можно вставлять любые элементы: списки, картинки и т.д.</p>
-  </div>
-</div>
-
     <section class="section partners" id="partners">
       <div class="container">
         <h2 class="section__title">Наши партнеры</h2>
 
         <div class="partners__container">
           <img src="images/partners/evgen.jpg" alt="" class="partner__photo rounded-lg" />
-          <div class="partner__desc p-8">
-            <p class="text-lg text-center text-gray-600 mb-6 font-bold">Евгений aka JekSon36: Путешествия, природа и гармония в каждой детали!</p>
+          <div class="partner__description">
+            <p class="text-lg text-center text-gray-600 mb-2 font-bold">Евгений aka JekSon36: Путешествия, природа и
+              гармония в каждой детали! <button class="accordion-btn px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-all">
+                <svg id="partner-info-arrow" class="w-5 h-5 transform transition-transform" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button></p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400">Друзья, мы рады представить вам нашего замечательного спонсора фестиваля – Евгения, известного в кругах
-            любителей приключений как JekSon36!</p>
+            <div class="partner__description__extra max-h-0">
+              <p class="mb-3 text-gray-500 dark:text-gray-400">Друзья, мы рады представить вам нашего замечательного
+                спонсора фестиваля – Евгения, известного в кругах
+                любителей приключений как JekSon36!</p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Кто такой Евгений?</p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Кто такой Евгений?</p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400">Евгений – человек, в котором гармонично сочетаются практичность и любовь к приключениям. Житель Воронежа,
-            сын автолюбителя и швеи, он умеет создавать красоту как в домах, так и на просторах дикой природы. В свои
-            "почти 25 лет в душе и 52 по паспорту" он с энтузиазмом занимается любимым делом и считает, что не работает
-            ни дня в своей жизни!</p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">Евгений – человек, в котором гармонично сочетаются
+                практичность и любовь к приключениям. Житель Воронежа,
+                сын автолюбителя и швеи, он умеет создавать красоту как в домах, так и на просторах дикой природы. В
+                свои
+                "почти 25 лет в душе и 52 по паспорту" он с энтузиазмом занимается любимым делом и считает, что не
+                работает
+                ни дня в своей жизни!</p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Чем занимается?</p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Чем занимается?</p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400">• Прораб по отделке жилого фонда под ключ: Евгений превращает дома в уютные пространства, воплощая мечты в
-            реальность – от дизайна до финальной отделки.
-            </p>
-            <p class="mb-3 text-gray-500 dark:text-gray-400">
-              • JekSon-36 – организатор уникальных внедорожных экспедиций: Путешествия – это его страсть! Он организует
-            авторские туры по самым живописным уголкам, предлагая полное погружение в природу. В небольших группах (3-4
-            человека в машине, а теперь уже и 6-7 благодаря второй машине в команде!) он исследует труднодоступные
-            места, организуя палаточный лагерь и полевую кухню. Важно: все необходимое снаряжение предоставляется! 
-            </p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">• Прораб по отделке жилого фонда под ключ: Евгений
+                превращает дома в уютные пространства, воплощая мечты в
+                реальность – от дизайна до финальной отделки.
+              </p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">
+                • JekSon-36 – организатор уникальных внедорожных экспедиций: Путешествия – это его страсть! Он
+                организует
+                авторские туры по самым живописным уголкам, предлагая полное погружение в природу. В небольших группах
+                (3-4
+                человека в машине, а теперь уже и 6-7 благодаря второй машине в команде!) он исследует труднодоступные
+                места, организуя палаточный лагерь и полевую кухню. Важно: все необходимое снаряжение предоставляется!
+              </p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Чем может быть полезен участникам фестиваля?</p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Чем может быть полезен участникам фестиваля?
+              </p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400">• Помощь в создании идеального дома: Если вы мечтаете обновить интерьер, Евгений поможет реализовать самые
-            смелые идеи, контролируя каждый этап работ.</p>
-            <p class="mb-3 text-gray-500 dark:text-gray-400">• Незабываемое приключение: Сложно описать словами, что значит отправиться в экспедицию с JekSon-36. Это не
-            просто поездка на джипе, это полное погружение в мир дикой природы, невероятные виды, ночевки под звездами и
-            ощущение свободы. Если вы цените настоящие приключения, вам точно стоит попробовать!</p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">• Помощь в создании идеального дома: Если вы мечтаете
+                обновить интерьер, Евгений поможет реализовать самые
+                смелые идеи, контролируя каждый этап работ.</p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">• Незабываемое приключение: Сложно описать словами, что
+                значит отправиться в экспедицию с JekSon-36. Это не
+                просто поездка на джипе, это полное погружение в мир дикой природы, невероятные виды, ночевки под
+                звездами
+                и
+                ощущение свободы. Если вы цените настоящие приключения, вам точно стоит попробовать!</p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Почему Евгений выбрал эту деятельность?</p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Почему Евгений выбрал эту деятельность?</p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400">• Отделка домов: "По душе творить, приносить пользу людям".</p>
-            <p class="mb-3 text-gray-500 dark:text-gray-400">• Экспедиции: "По кайфу вытворять, ехать за тысячи километров, спать в палатках, наблюдать закаты и восходы,
-            видеть восторг туристов от происходящего, а когда это ещё в дружеской компании, это просто великолепно!!!"</p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">• Отделка домов: "По душе творить, приносить пользу
+                людям".
+              </p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">• Экспедиции: "По кайфу вытворять, ехать за тысячи
+                километров, спать в палатках, наблюдать закаты и восходы,
+                видеть восторг туристов от происходящего, а когда это ещё в дружеской компании, это просто
+                великолепно!!!"
+              </p>
 
-            <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Благодарим Евгения за поддержку нашего фестиваля!</p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">Благодарим Евгения за поддержку нашего
+                фестиваля!
+              </p>
+            </div>
           </div>
         </div>
-
         <div class="partners__grid">
 
           <!-- Партнер 1 -->
@@ -476,15 +483,6 @@
   </footer>
 
   <script src="js/script.js"></script>
-  <script>
-  function toggleAccordion(id) {
-    const content = document.getElementById(id);
-    const arrow = document.getElementById(`${id}-arrow`);
-    
-    content.classList.toggle('hidden');
-    arrow.classList.toggle('rotate-180');
-  }
-</script>
 </body>
 
 </html>

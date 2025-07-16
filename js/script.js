@@ -1,4 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.accordion-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      debugger
+      const item = button.closest('.partner__description');
+      const content = item.querySelector('.partner__description__extra');
+      const arrow = button.querySelector('svg');
+
+      // Переключаем текущий аккордеон
+      if (content.classList.contains('max-h-0')) {
+        content.classList.remove('max-h-0');
+        content.classList.add('max-h-[2000px]');
+        arrow.classList.add('rotate-180');
+      } else {
+        content.classList.remove('max-h-[2000px]');
+        content.classList.add('max-h-0');
+        arrow.classList.remove('rotate-180');
+      }
+    });
+  });
+
+
+
+
   // Параллакс эффект для героя
   const parallaxBg = document.getElementById("parallax-bg");
 
@@ -269,13 +292,10 @@ function drawSpeakers(entity, list) {
 
     list.forEach((speaker, index) => {
       const speakerElement = document.createElement("div");
-      speakerElement.className = `${entity}-circle rounded-full ${
-        speaker.color
-      } ${
-        speaker.bgColor
-      } w-20 h-20 flex items-center justify-center border-4 border-white mr-${
-        -overlap / 2
-      } ml-${-overlap / 2}`;
+      speakerElement.className = `${entity}-circle rounded-full ${speaker.color
+        } ${speaker.bgColor
+        } w-20 h-20 flex items-center justify-center border-4 border-white mr-${-overlap / 2
+        } ml-${-overlap / 2}`;
       speakerElement.style.marginRight = `-${overlap}px`;
       speakerElement.innerHTML = `
                     <img src="${speaker.photo}" alt="${speaker.name}" class="w-full h-full rounded-full object-cover">
@@ -319,48 +339,41 @@ function drawSpeakers(entity, list) {
     container.innerHTML = `
                 <div class="${entity}-info-grid grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
                     <div class="${entity}-photo flex flex-col items-center">
-                        <img src="${speaker.photo}" alt="${
-      speaker.name
-    }" class="w-64 h-128 rounded-lg object-cover border-4 ${
-      speaker.color
-    } border-opacity-50 mb-6">
-                        <h3 class="person-name text-2xl font-bold text-gray-800">${
-                          speaker.name
-                        }</h3>
-                        <p class="person-title text-lg ${speaker.color}">${
-      speaker.title
-    }</p>
+                        <img src="${speaker.photo}" alt="${speaker.name
+      }" class="w-64 h-128 rounded-lg object-cover border-4 ${speaker.color
+      } border-opacity-50 mb-6">
+                        <h3 class="person-name text-2xl font-bold text-gray-800">${speaker.name
+      }</h3>
+                        <p class="person-title text-lg ${speaker.color}">${speaker.title
+      }</p>
                         <p class="text-gray-600">${speaker.company}</p>
                     </div>
                     
                     <div class="${entity}-bio">
                         <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                            <i class="fas fa-user ${
-                              speaker.color
-                            } mr-2"></i> Обо мне
+                            <i class="fas fa-user ${speaker.color
+      } mr-2"></i> Обо мне
                         </h4>
-                        <p class="text-gray-700 leading-relaxed">${
-                          speaker.bio
-                        }</p>
+                        <p class="text-gray-700 leading-relaxed">${speaker.bio
+      }</p>
                     </div>
                     
                     <div class="${entity}-events">
                         <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                            <i class="fas fa-calendar-alt ${
-                              speaker.color
-                            } mr-2"></i> Проведу для тебя
+                            <i class="fas fa-calendar-alt ${speaker.color
+      } mr-2"></i> Проведу для тебя
                         </h4>
                         <ul class="space-y-3">
                             ${speaker.events
-                              .map(
-                                (event) => `
+        .map(
+          (event) => `
                                 <li class="flex items-start">
                                     <i class="fas fa-circle text-xs mt-2 mr-2 ${speaker.color} opacity-70"></i>
                                     <span class="text-gray-700">${event}</span>
                                 </li>
                             `
-                              )
-                              .join("")}
+        )
+        .join("")}
                         </ul>
                     </div>
                 </div>
@@ -421,9 +434,8 @@ function initPhotoDrum() {
     // Добавляем слайд
     const slide = document.createElement("div");
     slide.className = "drum-slide";
-    slide.innerHTML = `<img src="${photo}" class="drum-image" alt="Фото ${
-      index + 1
-    }">`;
+    slide.innerHTML = `<img src="${photo}" class="drum-image" alt="Фото ${index + 1
+      }">`;
     track.appendChild(slide);
 
     // Добавляем точку пагинации
