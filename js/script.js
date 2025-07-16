@@ -1,4 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".accordion-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const item = button.closest(".accordion-item");
+      const content = item.querySelector(".accordion-content");
+      const arrow = button.querySelector("svg");
+
+      // Закрываем другие аккордеоны (опционально)
+      document
+        .querySelectorAll(".accordion-content")
+        .forEach((otherContent) => {
+          if (otherContent !== content) {
+            otherContent.classList.remove("max-h-[1000px]");
+            otherContent.classList.add("max-h-0");
+            otherContent.previousElementSibling
+              .querySelector("svg")
+              .classList.remove("rotate-180");
+          }
+        });
+
+      // Переключаем текущий аккордеон
+      if (content.classList.contains("max-h-0")) {
+        content.classList.remove("max-h-0");
+        content.classList.add("max-h-[1000px]");
+        arrow.classList.add("rotate-180");
+      } else {
+        content.classList.remove("max-h-[1000px]");
+        content.classList.add("max-h-0");
+        arrow.classList.remove("rotate-180");
+      }
+    });
+  });
+
   // Параллакс эффект для героя
   const parallaxBg = document.getElementById("parallax-bg");
 
@@ -469,3 +501,23 @@ function initPhotoDrum() {
 document.addEventListener("DOMContentLoaded", initPhotoDrum);
 
 
+
+document.getElementById("ticketForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  const formData = new FormData(e.target);
+  
+  try {
+    const response = await fetch("https://the-serv.onrender.com/api/submit-ticket", {
+      method: "POST",
+      body: formData, // Не указывайте Content-Type вручную для FormData!
+    });
+
+    if (!response.ok) throw new Error(await response.text());
+
+    const data = await response.json(); // Парсим JSON
+    console.log("Ответ сервера:", data);
+  } catch (err) {
+    console.error("Ошибка:", err);
+  }
+});
