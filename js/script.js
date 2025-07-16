@@ -256,7 +256,7 @@ const masters = [
 <br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> инструктор по йоге 
 <br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> фитнес-тренер
 <br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> проводник гвоздестояния 
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> цифровой психолог `,
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> цифровой коуч `,
     events: [
       `практику состояния в пятницу`,
       `практику йоги (в сб и вс утром)`,
