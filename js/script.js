@@ -482,7 +482,7 @@ document.getElementById("ticketForm").addEventListener("submit", async (e) => {
   const formData = new FormData(e.target);
   
   try {
-    const response = await fetch("https://the-serv.onrender.com/api/submit-ticket", {
+    const response = await fetch("http://localhost:3000/api/submit-ticket", {
       method: "POST",
       body: formData, // Не указывайте Content-Type вручную для FormData!
     });
