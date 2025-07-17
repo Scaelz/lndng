@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.accordion-btn').forEach(button => {
     button.addEventListener('click', () => {
-      debugger
       const item = button.closest('.partner__description');
       const content = item.querySelector('.partner__description__extra');
       const arrow = button.querySelector('svg');
@@ -18,10 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-
-
-
   // Параллакс эффект для героя
   const parallaxBg = document.getElementById("parallax-bg");
 
@@ -261,7 +256,7 @@ const masters = [
 <br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> инструктор по йоге 
 <br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> фитнес-тренер
 <br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> проводник гвоздестояния 
-<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> цифровой психолог `,
+<br><i class="fas fa-circle text-xs mt-2 mr-2 text-purple-500 opacity-70"></i> цифровой коуч`,
     events: [
       `практику состояния в пятницу`,
       `практику йоги (в сб и вс утром)`,
@@ -480,3 +475,23 @@ function initPhotoDrum() {
 document.addEventListener("DOMContentLoaded", initPhotoDrum);
 
 
+
+document.getElementById("ticketForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  const formData = new FormData(e.target);
+  
+  try {
+    const response = await fetch("https://the-serv.onrender.com/api/submit-ticket", {
+      method: "POST",
+      body: formData, // Не указывайте Content-Type вручную для FormData!
+    });
+
+    if (!response.ok) throw new Error(await response.text());
+
+    const data = await response.json(); // Парсим JSON
+    console.log("Ответ сервера:", data);
+  } catch (err) {
+    console.error("Ошибка:", err);
+  }
+});
