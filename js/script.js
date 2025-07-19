@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Параллакс эффект для героя
   const parallaxBg = document.getElementById("parallax-bg");
 
-  window.addEventListener("scroll", function () {
-    const scrollPosition = window.pageYOffset;
-    parallaxBg.style.transform = "translateY(" + scrollPosition * 0.5 + "px)";
-  });
+  // window.addEventListener("scroll", function () {
+  //   const scrollPosition = window.pageYOffset;
+  //   parallaxBg.style.transform = "translateY(" + scrollPosition * 0.5 + "px)";
+  // });
 
   // Плавная прокрутка для навигации
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
