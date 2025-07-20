@@ -250,7 +250,7 @@ const speakers = [
     company: "",
     color: "text-blue-500",
     bgColor: "bg-blue-100",
-    photo: "images/speakers/kukushkina.jpg",
+    photo: "images/speakers/kukush.jpg",
     bio: `Практический психолог, член Международной ассоциации психологов, консультант по личностному росту и развитию личности, проверенные методики для решения сложных задач.
 Простые шаги к лучшей жизни.`,
     bioList: [
