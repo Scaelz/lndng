@@ -1,715 +1,634 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>Место силы</title>
-    <link rel="icon" href="images/misc/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header_title">
-            <img class="header_logo" src="images/misc/logo.png" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Место силы</title>
+  <link rel="icon" href="images/misc/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-          <button class="header__burger" aria-label="Меню">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          <nav class="header__nav">
-            <a href="#about" class="header__link">О фестивале</a>
-            <a href="#program" class="header__link">Программа</a>
-            <a href="#speakers" class="header__link">Спикеры</a>
-            <a href="#partners" class="header__link">Партнеры</a>
-            <a href="#tickets" class="header__link">Оплата</a>
-            <a href="#place" class="header__link">Место проведения</a>
-            <a href="#map" class="header__link">Схема проезда</a>
-            <a href="#contacts" class="header__link">Контакты</a>
-          </nav>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header_title">
+          <img class="header_logo" src="images/misc/logo.png" />
         </div>
+
+        <button class="header__burger" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="header__nav">
+          <a href="#about" class="header__link">О фестивале</a>
+          <a href="#program" class="header__link">Программа</a>
+          <a href="#speakers" class="header__link">Спикеры</a>
+          <a href="#partners" class="header__link">Партнеры</a>
+          <a href="#tickets" class="header__link">Оплата</a>
+          <a href="#place" class="header__link">Место проведения</a>
+          <a href="#map" class="header__link">Схема проезда</a>
+          <a href="#contacts" class="header__link">Контакты</a>
+        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero__bg" id="parallax-bg"></div>
-        <div class="hero__logo">
-          <h1 class="hero__title">Фестиваль «Место силы»</h1>
-          <p>психология | культура | саморазвитие</p>
-        </div>
-        <div class="hero__scroll">
-          <span>Листайте вниз</span>
-        </div>
-      </section>
+  <main>
+    <section class="hero">
+      <div class="hero__bg" id="parallax-bg"></div>
+      <div class="hero__logo">
+        <h1 class="hero__title">Фестиваль «Место силы»</h1>
+        <p>психология | культура | саморазвитие</p>
+      </div>
+      <div class="hero__scroll">
+        <span>Листайте вниз</span>
+      </div>
+    </section>
 
-      <section class="section about" id="about">
-        <div class="container">
-          <div class="section__inner">
-            <h2 class="section__title">О фестивале</h2>
-            <div class="section__content">
-              <div class="about__text">
-                <p class="about__paragraph">
-                  "Место cилы" - фестиваль психологии, культуры и саморазвития,
-                  где вы сможете отдохнуть, найти новых друзей, погрузиться в
-                  атмосферу спокойствия и наполниться ресурсом.
-                </p>
-                <p class="about__paragraph">
-                  Состоится с 1 по 3 августа в уникальном месте, недалеко от
-                  Воронежа. Это событие станет поворотной точкой на вашей дороге
-                  жизни.
-                </p>
-
-                <p class="about__paragraph">
-                  У нас вы приобретёте важные навыки:
-                </p>
-
-                <ul class="about__skills-list">
-                  <li class="about__skill-item">
-                    Научитесь внутреннему спокойствию и узнаете, как даже в
-                    сложных ситуациях оставаться в позитивном мышлении
-                  </li>
-                  <li class="about__skill-item">
-                    Сможете улучшить взаимоотношения: в семье, на работе, с
-                    друзьями
-                  </li>
-                  <li class="about__skill-item">
-                    Кто в поиске своей половинки, узнает как ускорить эту
-                    встречу и создать прочный союз
-                  </li>
-                  <li class="about__skill-item">
-                    Найдёте причину почему не растёт финансовый доход и
-                    построите стратегию его увеличения
-                  </li>
-                  <li class="about__skill-item">
-                    Научитесь сосредотачиваться на главном и управлять своим
-                    временем
-                  </li>
-                </ul>
-
-                <p class="about__paragraph about__paragraph--highlight">
-                  Наш фестиваль - не только место отдыха и релакса, он
-                  качественно изменит вашу жизнь
-                </p>
-              </div>
-              <div class="about__stats">
-                <div class="stat">
-                  <div class="stat__number">3</div>
-                  <div class="stat__label">дня</div>
-                </div>
-                <div class="stat">
-                  <div class="stat__number">150+</div>
-                  <div class="stat__label">участников</div>
-                </div>
-                <div class="stat">
-                  <div class="stat__number">25+</div>
-                  <div class="stat__label">спикеров</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section program" id="program">
-        <div class="container">
-          <h2 class="section__title">Программа</h2>
-          <div class="program__items">
-            <!-- Мероприятие 1 -->
-            <div class="program__item" data-color="#0080B0">
-              <div
-                class="program__preview"
-                style="
-                  background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
-                "
-              ></div>
-              <div class="program__info">
-                <div class="program__date">Пятница 1 августа</div>
-                <h3 class="program__title">
-                  День знакомства с пространством силы
-                </h3>
-                <div class="program__time">16:00 - 19:30</div>
-                <div class="program__desc">Заезд и размещение гостей</div>
-                <div class="program__time">19:30 - 20:30</div>
-                <div class="program__desc">Ужин</div>
-                <div class="program__time">20:30 - 21:00</div>
-                <div class="program__desc">
-                  Общий сбор, приветственное слово организаторов
-                </div>
-                <div class="program__time">21:00 - 21:30</div>
-                <div class="program__desc">
-                  Голосовая 3-d практика с Ириной Дмитроченковой
-                </div>
-                <div class="program__time">21:30 - 22:00</div>
-                <div class="program__desc">
-                  Сонастройка с пространством с Татьяной Чурсиной
-                </div>
-                <div class="program__time">22:00 - 23:00</div>
-                <div class="program__desc">
-                  Медитативная практика «Вечерний релакс» с Анной Соколовой. Для
-                  тех, кто не спит, но очень хочется
-                </div>
-                <div class="program__time">23:00</div>
-                <div class="program__desc">Подготовка и отход ко сну</div>
-              </div>
-            </div>
-
-            <!-- Мероприятие 2 -->
-            <div class="program__item" data-color="#213F33">
-              <div
-                class="program__preview"
-                style="
-                  background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
-                "
-              ></div>
-              <div class="program__info">
-                <div class="program__date">Суббота 2 августа</div>
-                <h3 class="program__title">Путь к внутреннему миру</h3>
-                <div class="program__time">08:00 - 09:00</div>
-                <div class="program__desc">
-                  «Приветствие солнцу» с Татьяной Чурсиной<br />
-                  Зарядка с Маратом Всемурадовичем
-                </div>
-                <div class="program__time">09:00 - 10:00</div>
-                <div class="program__desc">Завтрак</div>
-                <div class="program__time">10:00 - 11:00</div>
-                <div class="program__desc">
-                  Открытие фестиваля. <br />
-                  Танцевальное приветствие от руководителя клуба аргентинского
-                  танго «Дон Милангеро» Дмитрия Баклашова<br />
-                  Творческий подарок от заслуженного артиста Воронежской области
-                  Юрия Смышникова
-                </div>
-                <div class="program__time">11:15 - 11:30</div>
-                <div class="program__desc">
-                  Общая практика «Любовь к себе» (транзактный анализ, Людмила
-                  Кукушкина)
-                </div>
-                <div class="program__time">11:30 - 13:00</div>
-                <div class="program__desc">Первый поток мастер-классов</div>
-                <div class="program__time">13:00 - 14:00</div>
-                <div class="program__desc">Обед</div>
-                <div class="program__time">14:00 - 15:00</div>
-                <div class="program__desc">
-                  «Они вернутся» тренинг-лекция по взаимодействию с
-                  возвращающимися домой с боевых. Алексей Лисенко
-                </div>
-                <div class="program__time">15:00 - 16:00</div>
-                <div class="program__desc">
-                  Хороводы и подвижные игры с Маратом, джиппинг с Евгением
-                  Сапроновым
-                </div>
-                <div class="program__time">16:00 - 19:00</div>
-                <div class="program__desc">Второй поток мастер-классов</div>
-                <div class="program__time">19:00 - 20:00</div>
-                <div class="program__desc">Ужин</div>
-                <div class="program__time">20:30 - 21:30</div>
-                <div class="program__desc">
-                  Праздничная программа. <br />
-                  Выступления артистов. Олег Пожарский - моноспектакль с песнями
-                  на стихи Роберта Бёрнса в переводе Маршака - весело, ритмично,
-                  интерактивно!
-                </div>
-                <div class="program__time">21:30 - 23:30</div>
-                <div class="program__desc">
-                  Ecstatic dance с бубном от ди-джея международного уровня DIA
-                  (live)
-                </div>
-                <div class="program__time">23:30</div>
-                <div class="program__desc">
-                  Костёр, звёзды, песни под гитару, свободное общение
-                </div>
-              </div>
-            </div>
-
-            <!-- Мероприятие 3 -->
-            <div class="program__item" data-color="#5C504B">
-              <div
-                class="program__preview"
-                style="
-                  background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
-                "
-              ></div>
-              <div class="program__info">
-                <div class="program__date">Воскресенье 3 августа</div>
-                <h3 class="program__title">День Итогов и Будущего</h3>
-                <div class="program__time">08:00 - 09:00</div>
-                <div class="program__desc">
-                  Утро радости с нашими ведущими<br />
-                  «Приветствие солнцу» с Татьяной Чурсиной<br />
-                  Зарядка с Маратом Всемурадовичем
-                </div>
-                <div class="program__time">09:00 - 10:00</div>
-                <div class="program__desc">Завтрак</div>
-                <div class="program__time">10:00 - 10:30</div>
-                <div class="program__desc">Анонс предстоящего дня</div>
-                <div class="program__time">10:30 - 11:00</div>
-                <div class="program__desc">Первый поток мастер-классов</div>
-                <div class="program__time">11:00 - 11:30</div>
-                <div class="program__desc">
-                  Творческие выступления от известных поэтов и музыкантов,
-                  джиппинг с Евгением Сапроновым
-                </div>
-                <div class="program__time">11:30 - 13:00</div>
-                <div class="program__desc">Второй поток мастер-классов</div>
-                <div class="program__time">13:00 - 14:00</div>
-                <div class="program__desc">обед</div>
-                <div class="program__time">14:30 - 16:00</div>
-                <div class="program__desc">Третий поток мастер-классов</div>
-                <div class="program__time">16:00 - 17:00</div>
-                <div class="program__desc">
-                  Закрытие Фестиваля, розыгрыши призов и подарков, общее фото
-                </div>
-                <div class="program__time">17:00 - 18:00</div>
-                <div class="program__desc">Уборка территории, отъезд</div>
-              </div>
-            </div>
-            <div class="program__item" data-color="#0080B0">
-              <div
-                class="program__preview"
-                style="
-                  background-image: url('https://images.unsplash.com/photo-1475483768296-6163e08872a1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-                "
-              ></div>
-              <div class="program__info">
-                <div class="program__date">Ежедневные активности</div>
-                <h3 class="program__title"></h3>
-                <div class="program__desc">
-                  джиппинг с Евгением Сапроновым (по предварительной записи)
-                </div>
-                <div class="program__desc">
-                  тренажер правИло (по предварительной записи)
-                </div>
-                <div class="program__desc">
-                  ярмарка народных умельцев с диковинными вещицами
-                </div>
-                <div class="program__desc">детская площадка</div>
-                <div class="program__desc">
-                  <strong>Так же за отдельную стоимость вы можете:</strong>
-                  <br />- сделать гвоздь своими руками в кузнице <br />-
-                  попариться в бане
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="program__glow"></div>
-      </section>
-
-      <section class="speakers-section section" id="speakers">
-        <div class="container">
-          <div class="max-w-7xl mx-auto">
-            <h1 class="section__title">Спикеры</h1>
-            <p class="text-lg text-center text-gray-600 mb-12">
-              Кликните на фото спикера для подробной информации
-            </p>
-
-            <!-- Спикеры будут отображаться здесь -->
-            <div id="speakers-container" class="mb-16"></div>
-
-            <!-- Информация о спикере -->
-            <div
-              id="speaker-info-container"
-              class="speaker-info bg-white rounded-xl shadow-lg overflow-hidden"
-            >
-              <!-- Контент будет заполняться динамически -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="masters-section section" id="masters">
-        <div class="container">
-          <div class="max-w-7xl mx-auto">
-            <h1 class="section__title">Мастера практик</h1>
-            <p class="text-lg text-center text-gray-600 mb-12">
-              Кликните на фото мастера для подробной информации
-            </p>
-
-            <!-- Спикеры будут отображаться здесь -->
-            <div id="masters-container" class="mb-16"></div>
-
-            <!-- Информация о спикере -->
-            <div
-              id="master-info-container"
-              class="master-info bg-white rounded-xl shadow-lg overflow-hidden"
-            >
-              <!-- Контент будет заполняться динамически -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section partners" id="partners">
-        <div class="container">
-          <h2 class="section__title">Наши партнеры</h2>
-
-          <div class="partners__container">
-            <img
-              src="images/partners/evgen.jpg"
-              alt=""
-              class="partner__photo rounded-lg"
-            />
-
-            <div class="partner__description">
-              <p class="text-lg text-center text-gray-600 mb-2 font-bold">
-                Евгений aka JekSon36: Путешествия, природа и гармония в каждой
-                детали!
-                <button
-                  class="accordion-btn px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-all"
-                >
-                  <svg
-                    id="partner-info-arrow"
-                    class="w-5 h-5 transform transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__inner">
+          <h2 class="section__title">О фестивале</h2>
+          <div class="section__content">
+            <div class="about__text">
+              <p class="about__paragraph">
+                "Место cилы" - фестиваль психологии, культуры и саморазвития,
+                где вы сможете отдохнуть, найти новых друзей, погрузиться в
+                атмосферу спокойствия и наполниться ресурсом.
+              </p>
+              <p class="about__paragraph">
+                Состоится с 1 по 3 августа в уникальном месте, недалеко от
+                Воронежа. Это событие станет поворотной точкой на вашей дороге
+                жизни.
               </p>
 
-              <div class="partner__description__extra max-h-0">
-                <p class="mb-3 text-gray-500 dark:text-gray-400">
-                  Друзья, мы рады представить вам нашего замечательного спонсора
-                  фестиваля – Евгения, известного в кругах любителей приключений
-                  как JekSon36!
-                </p>
+              <p class="about__paragraph">
+                У нас вы приобретёте важные навыки:
+              </p>
 
-                <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
-                  Кто такой Евгений?
-                </p>
-
-                <p class="mb-3 text-gray-500 dark:text-gray-400">
-                  Евгений – человек, в котором гармонично сочетаются
-                  практичность и любовь к приключениям. Житель Воронежа, сын
-                  автолюбителя и швеи, он умеет создавать красоту как в домах,
-                  так и на просторах дикой природы. В свои "почти 25 лет в душе
-                  и 52 по паспорту" он с энтузиазмом занимается любимым делом и
-                  считает, что не работает ни дня в своей жизни!
-                </p>
-
-                <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
-                  Чем занимается?
-                </p>
-
-                <p class="mb-3 text-gray-500 dark:text-gray-400">
-                  • Прораб по отделке жилого фонда под ключ: Евгений превращает
-                  дома в уютные пространства, воплощая мечты в реальность – от
-                  дизайна до финальной отделки.
-                </p>
-                <p class="mb-3 text-gray-500 dark:text-gray-400">
-                  • JekSon-36 – организатор уникальных внедорожных экспедиций:
-                  Путешествия – это его страсть! Он организует авторские туры по
-                  самым живописным уголкам, предлагая полное погружение в
-                  природу. В небольших группах (3-4 человека в машине, а теперь
-                  уже и 6-7 благодаря второй машине в команде!) он исследует
-                  труднодоступные места, организуя палаточный лагерь и полевую
-                  кухню. Важно: все необходимое снаряжение предоставляется!
-                </p>
-
-                <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
-                  Чем может быть полезен участникам фестиваля?
-                </p>
-
-                <p class="mb-3 text-gray-500 dark:text-gray-400">
-                  • Помощь в создании идеального дома: Если вы мечтаете обновить
-                  интерьер, Евгений поможет реализовать самые смелые идеи,
-                  контролируя каждый этап работ.
-                </p>
-                <p class="mb-3 text-gray-500 dark:text-gray-400">
-                  • Незабываемое приключение: Сложно описать словами, что значит
-                  отправиться в экспедицию с JekSon-36. Это не просто поездка на
-                  джипе, это полное погружение в мир дикой природы, невероятные
-                  виды, ночевки под звездами и ощущение свободы. Если вы цените
-                  настоящие приключения, вам точно стоит попробовать!
-                </p>
-
-                <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
-                  Почему Евгений выбрал эту деятельность?
-                </p>
-
-                <p class="mb-3 text-gray-500 dark:text-gray-400">
-                  • Отделка домов: "По душе творить, приносить пользу людям".
-                </p>
-                <p class="mb-3 text-gray-500 dark:text-gray-400">
-                  • Экспедиции: "По кайфу вытворять, ехать за тысячи километров,
-                  спать в палатках, наблюдать закаты и восходы, видеть восторг
-                  туристов от происходящего, а когда это ещё в дружеской
-                  компании, это просто великолепно!!!"
-                </p>
-
-                <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
-                  Благодарим Евгения за поддержку нашего фестиваля!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="partners__grid">
-            <!-- Партнер 1 -->
-            <div class="partner__card">
-              <img
-                src="https://via.placeholder.com/200x100?text=Partner+2"
-                alt="Логотип партнера 2"
-                class="partner__logo"
-              />
-              <div class="partner__info">
-                <h3 class="partner__name">Арт-фонд</h3>
-                <p class="partner__desc">Поддержка молодых художников</p>
-              </div>
-            </div>
-
-            <!-- Партнер 2 -->
-            <div class="partner__card">
-              <img
-                src="https://via.placeholder.com/200x100?text=Partner+3"
-                alt="Логотип партнера 3"
-                class="partner__logo"
-              />
-              <div class="partner__info">
-                <h3 class="partner__name">Городские власти</h3>
-                <p class="partner__desc">Организационная поддержка</p>
-              </div>
-            </div>
-
-            <!-- Партнер 3 -->
-            <div class="partner__card">
-              <img
-                src="https://via.placeholder.com/200x100?text=Partner+4"
-                alt="Логотип партнера 4"
-                class="partner__logo"
-              />
-              <div class="partner__info">
-                <h3 class="partner__name">Медиагруппа</h3>
-                <p class="partner__desc">Информационный партнер</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section pricing" id="tickets">
-        <div class="container">
-          <div class="section__inner">
-            <h2 class="section__title">Стоимость участия</h2>
-            <div class="pricing__content">
-              <div class="pricing__highlight">
-                <span class="pricing__main-price">❗️ 4500 руб ❗️</span>
-                <span class="pricing__main-extra">до 22 июля</span>
-              </div>
-
-              <ul class="pricing__includes">
-                <li>В стоимость входит вся программа и проживание</li>
-                <li>Питание оплачивается отдельно</li>
+              <ul class="about__skills-list">
+                <li class="about__skill-item">
+                  Научитесь внутреннему спокойствию и узнаете, как даже в
+                  сложных ситуациях оставаться в позитивном мышлении
+                </li>
+                <li class="about__skill-item">
+                  Сможете улучшить взаимоотношения: в семье, на работе, с
+                  друзьями
+                </li>
+                <li class="about__skill-item">
+                  Кто в поиске своей половинки, узнает как ускорить эту
+                  встречу и создать прочный союз
+                </li>
+                <li class="about__skill-item">
+                  Найдёте причину почему не растёт финансовый доход и
+                  построите стратегию его увеличения
+                </li>
+                <li class="about__skill-item">
+                  Научитесь сосредотачиваться на главном и управлять своим
+                  временем
+                </li>
               </ul>
 
-              <div class="about__paragraph--highlight">
-                <div class="pricing__discounts">
-                  <p>
-                    Дети до 7 лет <span class="pricing__free">бесплатно</span>
-                  </p>
-                  <p>
-                    Дети от 7 до 16 лет
-                    <span class="pricing__half">50% скидка</span>
-                  </p>
-                </div>
+              <p class="about__paragraph about__paragraph--highlight">
+                Наш фестиваль - не только место отдыха и релакса, он
+                качественно изменит вашу жизнь
+              </p>
+            </div>
+            <div class="about__stats">
+              <div class="stat">
+                <div class="stat__number">3</div>
+                <div class="stat__label">дня</div>
               </div>
-
-              <div class="pricing__timeline">
-                <div class="timeline__item">
-                  <span class="timeline__dates">С 23 июля по 27 июля</span>
-                  <span class="timeline__price">5000 рублей</span>
-                </div>
-                <div class="timeline__item">
-                  <span class="timeline__dates">С 28 июля по 31 июля</span>
-                  <span class="timeline__price">5500 рублей</span>
-                </div>
-                <div class="timeline__item">
-                  <span class="timeline__dates">На входе</span>
-                  <span class="timeline__price">6000 рублей</span>
-                </div>
+              <div class="stat">
+                <div class="stat__number">150+</div>
+                <div class="stat__label">участников</div>
               </div>
-
-              <div class="pricing__contact">
-                По вопросам оплаты обращайтесь по телефону:
-                <p class="contact__phone">📞 +7-951-559-21-90 Лариса</p>
+              <div class="stat">
+                <div class="stat__number">25+</div>
+                <div class="stat__label">спикеров</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section place" id="place">
-        <div class="container">
-          <div class="section__inner">
-            <h2 class="section__title">Место проведения</h2>
-            <div class="section__content">
-              <div class="about__text">
-                <p class="about__paragraph">
-                  Живописное пространство ретрит-центра, наполняющее энергией,
-                  силой и радостью. Величественный ландшафт, шатры для практик и
-                  просторная трапезная располагают к отдыху и душевной гармонии.
-                </p>
-                <p class="about__paragraph"></p>
-                <p class="about__paragraph">
-                  Все для комфортного проживания: баня, душевые кабинки,
-                  уборная, ухоженная территория с современным освещением.
-                </p>
-                <p class="about__paragraph">
-                  Здесь легко расслабиться, восстановить силы и ощутить гармонию
-                  с самим собой и окружающим миром!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section drum">
-        <section class="container">
-          <div class="drum-container">
-            <div class="drum-track" id="drumTrack"></div>
-          </div>
-          <div class="drum-pagination" id="drumPagination"></div>
-        </section>
-      </section>
-
-      <section class="section contacts" id="map">
-        <div class="container">
-          <div class="section__inner">
-            <h2 class="section__title">Схема проезда</h2>
-            <div class="section__content">
-              <div class="contact mb-6">
-                <div class="contact__icon">📍</div>
-                <div class="contact__text">
-                  г. Воронеж, село Горожанка, ретритный центр «Новая земля».
-                </div>
-              </div>
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A494e9aff3ed5af6f9a7e9b40f05b58d179e4fcc24974491d0883f3378a70c9d9&amp;source=constructor"
-                height="400"
-                width="100%"
-                frameborder="0"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contacts" id="contacts">
-        <div class="container">
-          <div class="section__inner">
-            <h2 class="section__title">Контакты</h2>
-            <div class="section__content">
-              <div class="contacts__info">
-                <div class="contact">
-                  <div class="contact__icon">📞</div>
-                  <div class="contact__text">+7-951-559-21-90 Лариса</div>
-                </div>
-                <div class="contact">
-                  <div class="contact__icon">📞</div>
-                  <div class="contact__text">+7-910-348-04-91 Татьяна</div>
-                </div>
-                <div class="contact">
-                  <div class="contact__icon">📞</div>
-                  <div class="contact__text">+7-900-928-55-49 Ирина</div>
-                </div>
-              </div>
-              <div class="contacts__social">
-                <a
-                  href="https://t.me/mesto_sily36rus"
-                  target="_blank"
-                  rel="nofollow noopener"
-                  aria-label="VK (откроется в новой вкладке)"
-                  class="social-link vk-link"
-                >
-                  <svg
-                    class="t-sociallinks__svg"
-                    role="img"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 100 100"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z"
-                    ></path>
-                  </svg>
-                </a>
-
-                <a
-                  href="https://vk.com/club231518501"
-                  target="_blank"
-                  rel="nofollow noopener"
-                  aria-label="Telegram (откроется в новой вкладке)"
-                  class="social-link tg-link"
-                >
-                  <svg
-                    class="t-sociallinks__svg"
-                    role="img"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 100 100"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50ZM25 34c.406 19.488 10.15 31.2 27.233 31.2h.968V54.05c6.278.625 11.024 5.216 12.93 11.15H75c-2.436-8.87-8.838-13.773-12.836-15.647C66.162 47.242 71.783 41.62 73.126 34h-8.058c-1.749 6.184-6.932 11.805-11.867 12.336V34h-8.057v21.611C40.147 54.362 33.838 48.304 33.556 34H25Z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__copy">© ArtFest 2025. Все права защищены.</div>
-          <div class="footer__links">
-            <a href="#" class="footer__link">Политика конфиденциальности</a>
-            <a href="#" class="footer__link">Правила посещения</a>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="js/script.js"></script>
-  </body>
+    <section class="section program" id="program">
+      <div class="container">
+        <h2 class="section__title">Программа</h2>
+        <div class="program__items">
+          <!-- Мероприятие 1 -->
+          <div class="program__item" data-color="#0080B0">
+            <div class="program__preview" style="
+                  background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                "></div>
+            <div class="program__info">
+              <div class="program__date">Пятница 1 августа</div>
+              <h3 class="program__title">
+                День знакомства с пространством силы
+              </h3>
+              <div class="program__time">16:00 - 19:30</div>
+              <div class="program__desc">Заезд и размещение гостей</div>
+              <div class="program__time">19:30 - 20:30</div>
+              <div class="program__desc">Ужин</div>
+              <div class="program__time">20:30 - 21:00</div>
+              <div class="program__desc">
+                Общий сбор, приветственное слово организаторов
+              </div>
+              <div class="program__time">21:00 - 21:30</div>
+              <div class="program__desc">
+                Голосовая 3-d практика с Ириной Дмитроченковой
+              </div>
+              <div class="program__time">21:30 - 22:00</div>
+              <div class="program__desc">
+                Сонастройка с пространством с Татьяной Чурсиной
+              </div>
+              <div class="program__time">22:00 - 23:00</div>
+              <div class="program__desc">
+                Медитативная практика «Вечерний релакс» с Анной Соколовой. Для
+                тех, кто не спит, но очень хочется
+              </div>
+              <div class="program__time">23:00</div>
+              <div class="program__desc">Подготовка и отход ко сну</div>
+            </div>
+          </div>
+
+          <!-- Мероприятие 2 -->
+          <div class="program__item" data-color="#213F33">
+            <div class="program__preview" style="
+                  background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                "></div>
+            <div class="program__info">
+              <div class="program__date">Суббота 2 августа</div>
+              <h3 class="program__title">Путь к внутреннему миру</h3>
+              <div class="program__time">08:00 - 09:00</div>
+              <div class="program__desc">
+                «Приветствие солнцу» с Татьяной Чурсиной<br />
+                Зарядка с Маратом Всемурадовичем
+              </div>
+              <div class="program__time">09:00 - 10:00</div>
+              <div class="program__desc">Завтрак</div>
+              <div class="program__time">10:00 - 11:00</div>
+              <div class="program__desc">
+                Открытие фестиваля. <br />
+                Танцевальное приветствие от руководителя клуба аргентинского
+                танго «Дон Милангеро» Дмитрия Баклашова<br />
+                Творческий подарок от заслуженного артиста Воронежской области
+                Юрия Смышникова
+              </div>
+              <div class="program__time">11:15 - 11:30</div>
+              <div class="program__desc">
+                Общая практика «Любовь к себе» (транзактный анализ, Людмила
+                Кукушкина)
+              </div>
+              <div class="program__time">11:30 - 13:00</div>
+              <div class="program__desc">Первый поток мастер-классов</div>
+              <div class="program__time">13:00 - 14:00</div>
+              <div class="program__desc">Обед</div>
+              <div class="program__time">14:00 - 15:00</div>
+              <div class="program__desc">
+                «Они вернутся» тренинг-лекция по взаимодействию с
+                возвращающимися домой с боевых. Алексей Лисенко
+              </div>
+              <div class="program__time">15:00 - 16:00</div>
+              <div class="program__desc">
+                Хороводы и подвижные игры с Маратом, джиппинг с Евгением
+                Сапроновым
+              </div>
+              <div class="program__time">16:00 - 19:00</div>
+              <div class="program__desc">Второй поток мастер-классов</div>
+              <div class="program__time">19:00 - 20:00</div>
+              <div class="program__desc">Ужин</div>
+              <div class="program__time">20:30 - 21:30</div>
+              <div class="program__desc">
+                Праздничная программа. <br />
+                Выступления артистов. Олег Пожарский - моноспектакль с песнями
+                на стихи Роберта Бёрнса в переводе Маршака - весело, ритмично,
+                интерактивно!
+              </div>
+              <div class="program__time">21:30 - 23:30</div>
+              <div class="program__desc">
+                Ecstatic dance с бубном от ди-джея международного уровня DIA
+                (live)
+              </div>
+              <div class="program__time">23:30</div>
+              <div class="program__desc">
+                Костёр, звёзды, песни под гитару, свободное общение
+              </div>
+            </div>
+          </div>
+
+          <!-- Мероприятие 3 -->
+          <div class="program__item" data-color="#5C504B">
+            <div class="program__preview" style="
+                  background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                "></div>
+            <div class="program__info">
+              <div class="program__date">Воскресенье 3 августа</div>
+              <h3 class="program__title">День Итогов и Будущего</h3>
+              <div class="program__time">08:00 - 09:00</div>
+              <div class="program__desc">
+                Утро радости с нашими ведущими<br />
+                «Приветствие солнцу» с Татьяной Чурсиной<br />
+                Зарядка с Маратом Всемурадовичем
+              </div>
+              <div class="program__time">09:00 - 10:00</div>
+              <div class="program__desc">Завтрак</div>
+              <div class="program__time">10:00 - 10:30</div>
+              <div class="program__desc">Анонс предстоящего дня</div>
+              <div class="program__time">10:30 - 11:00</div>
+              <div class="program__desc">Первый поток мастер-классов</div>
+              <div class="program__time">11:00 - 11:30</div>
+              <div class="program__desc">
+                Творческие выступления от известных поэтов и музыкантов,
+                джиппинг с Евгением Сапроновым
+              </div>
+              <div class="program__time">11:30 - 13:00</div>
+              <div class="program__desc">Второй поток мастер-классов</div>
+              <div class="program__time">13:00 - 14:00</div>
+              <div class="program__desc">обед</div>
+              <div class="program__time">14:30 - 16:00</div>
+              <div class="program__desc">Третий поток мастер-классов</div>
+              <div class="program__time">16:00 - 17:00</div>
+              <div class="program__desc">
+                Закрытие Фестиваля, розыгрыши призов и подарков, общее фото
+              </div>
+              <div class="program__time">17:00 - 18:00</div>
+              <div class="program__desc">Уборка территории, отъезд</div>
+            </div>
+          </div>
+          <div class="program__item" data-color="#0080B0">
+            <div class="program__preview" style="
+                  background-image: url('https://images.unsplash.com/photo-1475483768296-6163e08872a1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                "></div>
+            <div class="program__info">
+              <div class="program__date">Ежедневные активности</div>
+              <h3 class="program__title"></h3>
+              <div class="program__desc">
+                джиппинг с Евгением Сапроновым (по предварительной записи)
+              </div>
+              <div class="program__desc">
+                тренажер правИло (по предварительной записи)
+              </div>
+              <div class="program__desc">
+                ярмарка народных умельцев с диковинными вещицами
+              </div>
+              <div class="program__desc">детская площадка</div>
+              <div class="program__desc">
+                <strong>Так же за отдельную стоимость вы можете:</strong>
+                <br />- сделать гвоздь своими руками в кузнице <br />-
+                попариться в бане
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="program__glow"></div>
+    </section>
+
+    <section class="speakers-section section" id="speakers">
+      <div class="container">
+        <div class="max-w-7xl mx-auto">
+          <h1 class="section__title">Спикеры</h1>
+          <p class="text-lg text-center text-gray-600 mb-12">
+            Кликните на фото спикера для подробной информации
+          </p>
+
+          <!-- Спикеры будут отображаться здесь -->
+          <div id="speakers-container" class="mb-16"></div>
+
+          <!-- Информация о спикере -->
+          <div id="speaker-info-container" class="speaker-info bg-white rounded-xl shadow-lg overflow-hidden">
+            <!-- Контент будет заполняться динамически -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="masters-section section" id="masters">
+      <div class="container">
+        <div class="max-w-7xl mx-auto">
+          <h1 class="section__title">Мастера практик</h1>
+          <p class="text-lg text-center text-gray-600 mb-12">
+            Кликните на фото мастера для подробной информации
+          </p>
+
+          <!-- Спикеры будут отображаться здесь -->
+          <div id="masters-container" class="mb-16"></div>
+
+          <!-- Информация о спикере -->
+          <div id="master-info-container" class="master-info bg-white rounded-xl shadow-lg overflow-hidden">
+            <!-- Контент будет заполняться динамически -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section partners" id="partners">
+      <div class="container">
+        <h2 class="section__title">Наши партнеры</h2>
+
+        <div class="partners__container">
+          <img src="images/partners/evgen.jpg" alt="" class="partner__photo rounded-lg" />
+
+          <div class="partner__description">
+            <p class="text-lg text-center text-gray-600 mb-2 font-bold">
+              Евгений aka JekSon36: Путешествия, природа и гармония в каждой
+              детали!
+              <button class="accordion-btn px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-all">
+                <svg id="partner-info-arrow" class="w-5 h-5 transform transition-transform" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </p>
+
+            <div class="partner__description__extra max-h-0">
+              <p class="mb-3 text-gray-500 dark:text-gray-400">
+                Друзья, мы рады представить вам нашего замечательного спонсора
+                фестиваля – Евгения, известного в кругах любителей приключений
+                как JekSon36!
+              </p>
+
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
+                Кто такой Евгений?
+              </p>
+
+              <p class="mb-3 text-gray-500 dark:text-gray-400">
+                Евгений – человек, в котором гармонично сочетаются
+                практичность и любовь к приключениям. Житель Воронежа, сын
+                автолюбителя и швеи, он умеет создавать красоту как в домах,
+                так и на просторах дикой природы. В свои "почти 25 лет в душе
+                и 52 по паспорту" он с энтузиазмом занимается любимым делом и
+                считает, что не работает ни дня в своей жизни!
+              </p>
+
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
+                Чем занимается?
+              </p>
+
+              <p class="mb-3 text-gray-500 dark:text-gray-400">
+                • Прораб по отделке жилого фонда под ключ: Евгений превращает
+                дома в уютные пространства, воплощая мечты в реальность – от
+                дизайна до финальной отделки.
+              </p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">
+                • JekSon-36 – организатор уникальных внедорожных экспедиций:
+                Путешествия – это его страсть! Он организует авторские туры по
+                самым живописным уголкам, предлагая полное погружение в
+                природу. В небольших группах (3-4 человека в машине, а теперь
+                уже и 6-7 благодаря второй машине в команде!) он исследует
+                труднодоступные места, организуя палаточный лагерь и полевую
+                кухню. Важно: все необходимое снаряжение предоставляется!
+              </p>
+
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
+                Чем может быть полезен участникам фестиваля?
+              </p>
+
+              <p class="mb-3 text-gray-500 dark:text-gray-400">
+                • Помощь в создании идеального дома: Если вы мечтаете обновить
+                интерьер, Евгений поможет реализовать самые смелые идеи,
+                контролируя каждый этап работ.
+              </p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">
+                • Незабываемое приключение: Сложно описать словами, что значит
+                отправиться в экспедицию с JekSon-36. Это не просто поездка на
+                джипе, это полное погружение в мир дикой природы, невероятные
+                виды, ночевки под звездами и ощущение свободы. Если вы цените
+                настоящие приключения, вам точно стоит попробовать!
+              </p>
+
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
+                Почему Евгений выбрал эту деятельность?
+              </p>
+
+              <p class="mb-3 text-gray-500 dark:text-gray-400">
+                • Отделка домов: "По душе творить, приносить пользу людям".
+              </p>
+              <p class="mb-3 text-gray-500 dark:text-gray-400">
+                • Экспедиции: "По кайфу вытворять, ехать за тысячи километров,
+                спать в палатках, наблюдать закаты и восходы, видеть восторг
+                туристов от происходящего, а когда это ещё в дружеской
+                компании, это просто великолепно!!!"
+              </p>
+
+              <p class="mb-3 text-gray-500 dark:text-gray-400 font-bold">
+                Благодарим Евгения за поддержку нашего фестиваля!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="partners__grid">
+          <!-- Партнер 1 -->
+          <div class="partner__card">
+            <img src="https://via.placeholder.com/200x100?text=Partner+2" alt="Логотип партнера 2"
+              class="partner__logo" />
+            <div class="partner__info">
+              <h3 class="partner__name">Арт-фонд</h3>
+              <p class="partner__desc">Поддержка молодых художников</p>
+            </div>
+          </div>
+
+          <!-- Партнер 2 -->
+          <div class="partner__card">
+            <img src="https://via.placeholder.com/200x100?text=Partner+3" alt="Логотип партнера 3"
+              class="partner__logo" />
+            <div class="partner__info">
+              <h3 class="partner__name">Городские власти</h3>
+              <p class="partner__desc">Организационная поддержка</p>
+            </div>
+          </div>
+
+          <!-- Партнер 3 -->
+          <div class="partner__card">
+            <img src="https://via.placeholder.com/200x100?text=Partner+4" alt="Логотип партнера 4"
+              class="partner__logo" />
+            <div class="partner__info">
+              <h3 class="partner__name">Медиагруппа</h3>
+              <p class="partner__desc">Информационный партнер</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="tickets">
+      <div class="container">
+        <div class="section__inner">
+          <h2 class="section__title">Стоимость участия</h2>
+          <div class="pricing__content">
+            <div class="pricing__highlight">
+              <span class="pricing__main-price">❗️ 4500 руб ❗️</span>
+              <span class="pricing__main-extra">до 22 июля</span>
+            </div>
+
+            <ul class="pricing__includes">
+              <li>В стоимость входит вся программа и проживание</li>
+              <li>Питание оплачивается отдельно</li>
+            </ul>
+
+            <div class="about__paragraph--highlight">
+              <div class="pricing__discounts">
+                <p>
+                  Дети до 7 лет <span class="pricing__free">бесплатно</span>
+                </p>
+                <p>
+                  Дети от 7 до 16 лет
+                  <span class="pricing__half">50% скидка</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="pricing__timeline">
+              <div class="timeline__item">
+                <span class="timeline__dates">С 23 июля по 27 июля</span>
+                <span class="timeline__price">5000 рублей</span>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__dates">С 28 июля по 31 июля</span>
+                <span class="timeline__price">5500 рублей</span>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__dates">На входе</span>
+                <span class="timeline__price">6000 рублей</span>
+              </div>
+            </div>
+
+            <div class="pricing__contact">
+              По вопросам оплаты обращайтесь по телефону:
+              <p class="contact__phone">📞 +7-951-559-21-90 Лариса</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section place" id="place">
+      <div class="container">
+        <div class="section__inner">
+          <h2 class="section__title">Место проведения</h2>
+          <div class="section__content">
+            <div class="about__text">
+              <p class="about__paragraph">
+                Живописное пространство ретрит-центра, наполняющее энергией,
+                силой и радостью. Величественный ландшафт, шатры для практик и
+                просторная трапезная располагают к отдыху и душевной гармонии.
+              </p>
+              <p class="about__paragraph"></p>
+              <p class="about__paragraph">
+                Все для комфортного проживания: баня, душевые кабинки,
+                уборная, ухоженная территория с современным освещением.
+              </p>
+              <p class="about__paragraph">
+                Здесь легко расслабиться, восстановить силы и ощутить гармонию
+                с самим собой и окружающим миром!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section drum">
+      <section class="container">
+        <div class="drum-container">
+          <div class="drum-track" id="drumTrack"></div>
+        </div>
+        <div class="drum-pagination" id="drumPagination"></div>
+      </section>
+    </section>
+
+    <section class="section contacts" id="map">
+      <div class="container">
+        <div class="section__inner">
+          <h2 class="section__title">Схема проезда</h2>
+          <div class="section__content">
+            <div class="contact mb-6">
+              <div class="contact__icon">📍</div>
+              <div class="contact__text">
+                г. Воронеж, село Горожанка, ретритный центр «Новая земля».
+              </div>
+            </div>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A494e9aff3ed5af6f9a7e9b40f05b58d179e4fcc24974491d0883f3378a70c9d9&amp;source=constructor"
+              height="400" width="100%" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contacts" id="contacts">
+      <div class="container">
+        <div class="section__inner">
+          <h2 class="section__title">Контакты</h2>
+          <div class="section__content">
+            <div class="contacts__info">
+              <div class="contact">
+                <div class="contact__icon">📞</div>
+                <div class="contact__text">+7-951-559-21-90 Лариса</div>
+              </div>
+              <div class="contact">
+                <div class="contact__icon">📞</div>
+                <div class="contact__text">+7-910-348-04-91 Татьяна</div>
+              </div>
+              <div class="contact">
+                <div class="contact__icon">📞</div>
+                <div class="contact__text">+7-900-928-55-49 Ирина</div>
+              </div>
+            </div>
+            <div class="contacts__social">
+              <a href="https://t.me/mesto_sily36rus" target="_blank" rel="nofollow noopener"
+                aria-label="VK (откроется в новой вкладке)" class="social-link vk-link">
+                <svg class="t-sociallinks__svg" role="img" width="30" height="30" viewBox="0 0 100 100"
+                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z">
+                  </path>
+                </svg>
+              </a>
+
+              <a href="https://vk.com/club231518501" target="_blank" rel="nofollow noopener"
+                aria-label="Telegram (откроется в новой вкладке)" class="social-link tg-link">
+                <svg class="t-sociallinks__svg" role="img" width="30" height="30" viewBox="0 0 100 100"
+                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50ZM25 34c.406 19.488 10.15 31.2 27.233 31.2h.968V54.05c6.278.625 11.024 5.216 12.93 11.15H75c-2.436-8.87-8.838-13.773-12.836-15.647C66.162 47.242 71.783 41.62 73.126 34h-8.058c-1.749 6.184-6.932 11.805-11.867 12.336V34h-8.057v21.611C40.147 54.362 33.838 48.304 33.556 34H25Z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__copy">© ArtFest 2025. Все права защищены.</div>
+        <div class="footer__links">
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+          <a href="#" class="footer__link">Правила посещения</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.min.js"></script>
+</body>
+
 </html>
